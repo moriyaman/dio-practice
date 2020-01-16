@@ -1,1 +1,240 @@
 @charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  
+body {
+  font-family: "Pragmatica", "Staatliches", "Noto Sans CJK JP", "游ゴシック", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #393E42
+}
+
+.logolist {
+  width: 100%; /*有効でない？*/
+  background: url(./images/logoline0.png) repeat-x; /*有効でない*/
+  background-size: auto 100%; /*有効でない*/
+}
+
+.logolist__slider {
+
+}
+
+.logolist__line {
+  width: 1900px;
+  overflow: hidden;
+}
+
+.FirstView {
+  position: relative;
+}
+
+.FirstView__movie {
+  width: 100%;
+  z-index: 1;
+}
+
+.FirstView__logo {
+
+}
+
+.FirstView__text {
+  font-family: "游ゴシック";
+  font-size: 17px;
+  color: #FFFFFF;
+  padding: 4px, 6px;
+  background-color: #6B8EF0;
+  display: inline-block;
+}
+
+.FirstView__btn {
+  font-family: "Staatliches";
+  font-size: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header {
+
+}
+
+.header__logo {
+  max-width: 50%;
+  margin: 20px auto 36px auto;
+}
+
+.carousel {
+  background-color: #F3F3F7;
+}
+
+.carousel__magazines {
+  list-style: none;
+  display: flex;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.carousel__magazine {
+  margin: 24px 40px 24px 40px;
+}
+
+.carousel__cover {
+
+}
+
+.carousel__numbering {
+  font-size: 8px;
+  margin-top: 12px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.carousel__title {
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.carousel__btn {
+  font-family: "游ゴシック";
+  font-size: 13px;
+  font-weight: normal;
+  color: #272727;
+  margin-bottom:  24px;
+  padding:10px 89px 10px 89px ;
+  border: solid 1px #272727;
+}
+
+.recommend {
+  margin-top: 104px;
+  padding: 0 ;
+}
+
+.recommend__MagazineTitle {
+  font-family: "Noto Sans CJK JP";
+  font-size: 19px;
+  width: 330px;
+  padding: 8px;
+  color: #FFFFFF;
+  background-color:#393E42 ;
+  border-radius: 22px; 
+}
+
+.recommend__thumbnail {
+
+}
+
+.recommend__ArticleTitle {
+  font-family: "Noto Sans CJK JP";
+  font-size: 31px;
+  width: 432px;
+  line-height: 48px;
+}
+
+.recommend__summary {
+  font-family: "Noto Sans CJK JP";
+  font-weight: lighter;
+  font-size: 16px;
+  color: #767676;
+  width: 432px;
+  line-height: 28px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav__list {
+  margin: 0 ;
+  padding: 0 ;
+}
+
+.nav__category {
+  list-style: none;
+  display: inline-block;
+  width: 10%;
+  min-width: 90px;
+}
+
+.articles {
+
+}
+
+.article__MagazineTitle {
+  font-family: "Noto Sans CJK JP";
+  font-size: 12px;
+  width: 215px;
+  padding: 8px 2px 8px 2px;
+  color: #FFFFFF;
+  background-color:#393E42 ;
+  border-radius: 12px; 
+}
+
+.article__thumbnail {
+
+}
+
+.article__ArticleTitle {
+  font-family: "Noto Sans CJK JP";
+  font-size: 20px;
+  width: 360px;
+  line-height: 26px;
+}
+
+.article__summary {
+  font-family: "Noto Sans CJK JP";
+  font-weight: lighter;
+  font-size: 12px;
+  color: #767676;
+  width: 360px;
+  line-height: 19px;
+}
+
+.articles__btn {
+  font-family: "游ゴシック";
+  font-size: 19px;
+  color: #FFFFFF;
+  padding: 16px, 120px;
+  background-color: #272727;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #272727;
+}
+
+.footer__logo {
+  width: 85px;
+  height: 49px;
+}
+
+.footer__list {
+  
+}
+
+.footer__item {
+  font-family: "Noto Sans CJK JP";
+  font-weight: normal;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__item--FollowUs {
+  font-size: 9px;
+  font-weight: lighter;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__item--icon {
+
+}
+
+.footer__item--copyright {
+  color: #AEAEAE;
+  font-size: 9px;
+  font-weight: lighter;
+}
