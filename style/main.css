@@ -1,10 +1,11 @@
 @charset "UTF-8";
 * {
-  margin: 0px;
   padding: 0px;
+  margin: 0px;
   }
   
 body {
+  overflow-x: hidden;
   font-family: "Pragmatica", "Staatliches", "Noto Sans CJK JP", "游ゴシック", sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -12,9 +13,7 @@ body {
 }
 
 .logolist {
-  width: 100%; /*有効でない？*/
-  background: url(./images/logoline0.png) repeat-x; /*有効でない*/
-  background-size: auto 100%; /*有効でない*/
+
 }
 
 .logolist__slider {
@@ -27,36 +26,48 @@ body {
 }
 
 .FirstView {
-  position: relative;
+  text-align: center;
 }
 
 .FirstView__movie {
   width: 100%;
-  z-index: 1;
+}
+
+.FirstView__items{
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 50%;
 }
 
 .FirstView__logo {
-
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 .FirstView__text {
+  text-align: center;
   font-family: "游ゴシック";
   font-size: 17px;
   color: #FFFFFF;
+  margin-top: 12px;
   padding: 4px, 6px;
   background-color: #6B8EF0;
   display: inline-block;
 }
 
 .FirstView__btn {
+  display: inline-block;
   font-family: "Staatliches";
   font-size: 24px;
   color: #FFFFFF;
+  margin-top: 188px;
   text-decoration: none;
 }
 
 .header {
-
+  text-align: center;
 }
 
 .header__logo {
@@ -66,6 +77,7 @@ body {
 
 .carousel {
   background-color: #F3F3F7;
+  text-align: center;
 }
 
 .carousel__magazines {
@@ -98,9 +110,11 @@ body {
 }
 
 .carousel__btn {
+  display: inline-block;
   font-family: "游ゴシック";
   font-size: 13px;
   font-weight: normal;
+  width: 244px;
   color: #272727;
   margin-bottom:  24px;
   padding:10px 89px 10px 89px ;
@@ -108,11 +122,32 @@ body {
 }
 
 .recommend {
+  margin: auto;
+  position: relative;
+  text-align: left;
   margin-top: 104px;
+  width: 1036px;
   padding: 0 ;
 }
 
+.recommend__thumbnail {
+  display: block;
+  width: 580px;
+}
+
+.recommend__thumbnail--png {
+}
+
+.recommend_AllText {
+  position: relative;
+  display: inline-block;
+  width: 432px;
+}
+
 .recommend__MagazineTitle {
+  position: absolute;
+  top: 0;
+  left: 604px;
   font-family: "Noto Sans CJK JP";
   font-size: 19px;
   width: 330px;
@@ -122,11 +157,10 @@ body {
   border-radius: 22px; 
 }
 
-.recommend__thumbnail {
-
-}
-
 .recommend__ArticleTitle {
+  position: absolute;
+  left: 604px;
+  top: 55px;
   font-family: "Noto Sans CJK JP";
   font-size: 31px;
   width: 432px;
@@ -134,6 +168,9 @@ body {
 }
 
 .recommend__summary {
+  position: absolute;
+  left: 604px;
+  top: 159px;
   font-family: "Noto Sans CJK JP";
   font-weight: lighter;
   font-size: 16px;
@@ -147,7 +184,7 @@ body {
 }
 
 .nav__list {
-  margin: 0 ;
+  margin: 82px 0 0 0;
   padding: 0 ;
 }
 
@@ -156,13 +193,51 @@ body {
   display: inline-block;
   width: 10%;
   min-width: 90px;
+  width: 179px;
+  height: 45px;
+}
+
+.nav__category--AllText {
+  text-decoration: none
+}
+
+.nav__category--select {
+  list-style: none;
+  display: inline-block;
+  width: 10%;
+  min-width: 90px;
+  width: 179px;
+  height: 45px;
+}
+
+.nav__category--en {
+  font-family: "Staatliches";
+  font-size: 25px;
+  padding: 0;
+  color: #272727;
+}
+
+.nav__category--ja {
+  font-family: "Noto Sans CJK JP";
+  font-size: 10px;
+  padding: 0;
+  color: #272727;
 }
 
 .articles {
+  margin: auto;
+  width: 1160px;
+}
 
+.articles__article {
+  width: 360px;
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 34px;
 }
 
 .article__MagazineTitle {
+  display: inline-block;
   font-family: "Noto Sans CJK JP";
   font-size: 12px;
   width: 215px;
@@ -174,6 +249,14 @@ body {
 
 .article__thumbnail {
 
+}
+
+.article__thumbnail--png {
+
+}
+
+.article__AllText {
+  text-align: left;
 }
 
 .article__ArticleTitle {
@@ -193,47 +276,153 @@ body {
 }
 
 .articles__btn {
+  text-align: center;
+  margin: 14px 0 64px 0;
+}
+
+.articles__btn--text {
+  display: inline-block;
+  color: #FFFFFF;
+  text-decoration: none;
   font-family: "游ゴシック";
   font-size: 19px;
-  color: #FFFFFF;
-  padding: 16px, 120px;
+  padding: 16px 120px;
   background-color: #272727;
   display: inline-block;
-  text-decoration: none;
 }
 
 .footer {
+  position: relative;
   background-color: #272727;
+  width: 100%;
+  height: 140px;
+  text-align: center;
 }
 
 .footer__logo {
+
+}
+
+.footer__logo--png {
+  position: absolute;
+  left: 64px;
+  bottom: 40px;
+  display: inline;
   width: 85px;
   height: 49px;
 }
 
 .footer__list {
-  
+
 }
 
-.footer__item {
+.footer__LinkText {
+  display: inline;
+}
+
+.footer__LinkText--text01 {
+  position: absolute;
+  left: 210px;
+  bottom: 54px;
   font-family: "Noto Sans CJK JP";
   font-weight: normal;
+  font-size: 12px;
   color: #FFFFFF;
   text-decoration: none;
 }
 
-.footer__item--FollowUs {
+.footer__LinkText--text02 {
+  position: absolute;
+  left: 374px;
+  bottom: 54px;
+  font-family: "Noto Sans CJK JP";
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__LinkText--text03 {
+  position: absolute;
+  left: 612px;
+  bottom: 54px;
+  font-family: "Noto Sans CJK JP";
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__LinkText--text04 {
+  position: absolute;
+  left: 739px;
+  bottom: 54px;
+  font-family: "Noto Sans CJK JP";
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__LinkText--border01 {
+  position: absolute;
+  left: 348px;
+  bottom: 54px;
+  font-family: "Noto Sans CJK JP";
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__LinkText--border02 {
+  position: absolute;
+  left: 588px;
+  bottom: 54px;
+  font-family: "Noto Sans CJK JP";
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__LinkText--border03 {
+  position: absolute;
+  left: 713px;
+  bottom: 54px;
+  font-family: "Noto Sans CJK JP";
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__FollowPatent {
+  position: relative;
+}
+
+.footer__FollowUs {
+  position: absolute;
+  top: 58px;
+  right: 17px;
+}
+
+.footer__FollowUs--text {
   font-size: 9px;
   font-weight: lighter;
   color: #FFFFFF;
   text-decoration: none;
 }
 
-.footer__item--icon {
-
+.footer__FollowUs--icon {
+  margin: 0 2 0 2;
 }
 
-.footer__item--copyright {
+.footer__Patent {
+  position: absolute;
+  top: 90px;
+  right: 28px;
+  display: block;
   color: #AEAEAE;
   font-size: 9px;
   font-weight: lighter;
