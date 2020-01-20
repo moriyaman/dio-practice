@@ -27,6 +27,7 @@ body {
 
 .FirstView {
   text-align: center;
+  position: relative;
 }
 
 .FirstView__movie {
@@ -38,7 +39,7 @@ body {
   right: 0;
   left: 0;
   margin: auto;
-  top: 50%;
+  top: 35%;
 }
 
 .FirstView__logo {
@@ -48,7 +49,7 @@ body {
 
 .FirstView__text {
   text-align: center;
-  font-family: "游ゴシック";
+  font-family: "Noto Sans CJK JP"";
   font-size: 17px;
   color: #FFFFFF;
   margin-top: 12px;
@@ -57,13 +58,17 @@ body {
   display: inline-block;
 }
 
-.FirstView__btn {
+.FirstView__icon--text {
   display: inline-block;
   font-family: "Staatliches";
   font-size: 24px;
   color: #FFFFFF;
   margin-top: 188px;
   text-decoration: none;
+}
+
+.FirstView__icon--svg {
+
 }
 
 .header {
@@ -85,6 +90,7 @@ body {
   display: flex;
   margin: 0px;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel__magazine {
@@ -109,9 +115,15 @@ body {
   text-align: center;
 }
 
+.carousel__RightIcon {
+  position: absolute;
+  right: 20px;
+  top:  1272px;
+}
+
 .carousel__btn {
   display: inline-block;
-  font-family: "游ゴシック";
+  font-family: "Noto Sans CJK JP"";
   font-size: 13px;
   font-weight: normal;
   width: 244px;
@@ -213,6 +225,7 @@ body {
 .nav__category--en {
   font-family: "Staatliches";
   font-size: 25px;
+  font-weight: normal;
   padding: 0;
   color: #272727;
 }
@@ -284,7 +297,7 @@ body {
   display: inline-block;
   color: #FFFFFF;
   text-decoration: none;
-  font-family: "游ゴシック";
+  font-family: "Noto Sans CJK JP"";
   font-size: 19px;
   padding: 16px 120px;
   background-color: #272727;
