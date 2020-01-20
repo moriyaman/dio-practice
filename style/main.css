@@ -2,8 +2,8 @@
 * {
   padding: 0px;
   margin: 0px;
-  }
-  
+}
+
 body {
   overflow-x: hidden;
   font-family: "Pragmatica", "Staatliches", "Noto Sans CJK JP", "游ゴシック", sans-serif;
@@ -58,6 +58,9 @@ body {
   display: inline-block;
 }
 
+.FirstView__icon {
+}
+
 .FirstView__icon--text {
   display: inline-block;
   font-family: "Staatliches";
@@ -68,7 +71,10 @@ body {
 }
 
 .FirstView__icon--svg {
-
+  position: absolute;
+  top: 470px;
+  right: 0;
+  left: 0;
 }
 
 .header {
@@ -166,7 +172,7 @@ body {
   padding: 8px;
   color: #FFFFFF;
   background-color:#393E42 ;
-  border-radius: 22px; 
+  border-radius: 22px;
 }
 
 .recommend__ArticleTitle {
@@ -257,7 +263,7 @@ body {
   padding: 8px 2px 8px 2px;
   color: #FFFFFF;
   background-color:#393E42 ;
-  border-radius: 12px; 
+  border-radius: 12px;
 }
 
 .article__thumbnail {
