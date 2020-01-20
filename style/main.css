@@ -1,11 +1,16 @@
-@charset "UTF-8"；
+@charset "UTF-8";
 
-
-body{
+* {
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
   font-family: "Pragmatica", "Staatliches", "Noto Sans CJK JP", "游ゴシック", sans-serif;
   font-size: 16px;
   font-weight: bold;
+  letter-spacing: 0.05em;
   color: #393E42
 }
 
@@ -49,13 +54,28 @@ body{
 
 .FirstView__text {
   text-align: center;
-  font-family: "Noto Sans CJK JP"";
+  font-family: "游ゴシック";
   font-size: 17px;
+  font-weight: 600;
   color: #FFFFFF;
-  margin-top: 12px;
-  padding: 4px, 6px;
+  margin: 12px auto 0 auto;
+  padding: 4px;
+  display: block;
+}
+
+.FirstView__text01 {
+  width: 241px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
   background-color: #6B8EF0;
-  display: inline-block;
+}
+
+.FirstView__text02 {
+  width: 281px;
+  margin: 0 auto;
+  display: block;
+  background-color: #6B8EF0;
 }
 
 .FirstView__icon {
@@ -66,13 +86,13 @@ body{
   font-family: "Staatliches";
   font-size: 24px;
   color: #FFFFFF;
-  margin-top: 188px;
+  margin-top: 120px;
   text-decoration: none;
 }
 
 .FirstView__icon--svg {
   position: absolute;
-  top: 470px;
+  top: 360px;
   right: 0;
   left: 0;
 }
@@ -100,11 +120,12 @@ body{
 }
 
 .carousel__magazine {
-  margin: 24px 40px 24px 40px;
+  margin: 24px 40px 0 0;
+  width: 500px;
 }
 
 .carousel__cover {
-
+  width: 129px;
 }
 
 .carousel__numbering {
@@ -129,7 +150,7 @@ body{
 
 .carousel__btn {
   display: inline-block;
-  font-family: "Noto Sans CJK JP"";
+  font-family: "Noto Sans CJK JP";
   font-size: 13px;
   font-weight: normal;
   width: 244px;
@@ -151,6 +172,7 @@ body{
 .recommend__thumbnail {
   display: block;
   width: 580px;
+  height: 244px;
 }
 
 .recommend__thumbnail--png {
@@ -162,20 +184,19 @@ body{
   width: 432px;
 }
 
-.recommend__MagazineTitle {
+.recommend__AllText--MagazineTitle {
   position: absolute;
   top: 0;
   left: 604px;
   font-family: "Noto Sans CJK JP";
   font-size: 19px;
-  width: 330px;
   padding: 8px;
   color: #FFFFFF;
   background-color:#393E42 ;
   border-radius: 22px;
 }
 
-.recommend__ArticleTitle {
+.recommend__AllText--ArticleTitle {
   position: absolute;
   left: 604px;
   top: 55px;
@@ -183,6 +204,11 @@ body{
   font-size: 31px;
   width: 432px;
   line-height: 48px;
+}
+
+.recommend__icon--svg {
+  display: block;
+  margin: 8px auto 0 auto;
 }
 
 .recommend__summary {
@@ -244,7 +270,7 @@ body{
 }
 
 .articles {
-  margin: auto;
+  margin: 0 auto;
   width: 1160px;
 }
 
@@ -303,7 +329,7 @@ body{
   display: inline-block;
   color: #FFFFFF;
   text-decoration: none;
-  font-family: "Noto Sans CJK JP"";
+  font-family: "Noto Sans CJK JP";
   font-size: 19px;
   padding: 16px 120px;
   background-color: #272727;
