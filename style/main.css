@@ -1,15 +1,16 @@
-@charset "UTF-8";
-* {
-  padding: 0px;
-  margin: 0px;
-}
+@charset "UTF-8"；
 
-body {
+
+body{
   overflow-x: hidden;
   font-family: "Pragmatica", "Staatliches", "Noto Sans CJK JP", "游ゴシック", sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #393E42
+}
+
+.TopPage {
+  position: relative;
 }
 
 .logolist {
@@ -27,7 +28,6 @@ body {
 
 .FirstView {
   text-align: center;
-  position: relative;
 }
 
 .FirstView__movie {
@@ -39,7 +39,7 @@ body {
   right: 0;
   left: 0;
   margin: auto;
-  top: 35%;
+  top: 45%;
 }
 
 .FirstView__logo {
