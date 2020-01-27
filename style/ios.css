@@ -1,0 +1,108 @@
+@charset "UTF-8";
+* {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Staatliches", "Noto Sans CJK JP", "游ゴシック", "游ゴシック体", "Yu Gothic", sans-serif;
+  font-weight: bold;
+  color: #141414;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+h5 {
+  font-size: 10px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: normal;
+  color: #767676;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #141414;
+  margin: 24px 24px 40px;
+  padding: 12px auto;
+}
+
+.FirstView {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+.FirstView__LogoLine {
+  display: block;
+  height: 56px;
+  width: auto;
+  overflow: hidden;
+}
+
+.FirstView__logo {
+  position: absolute;
+  margin: auto;
+  top: 45%;
+  width: 193px;
+  height: 110px;
+}
+
+.FirstView__text {
+  position: absolute;
+  display: block;
+  font-family: "游ゴシック", "游ゴシック体", "Yu Gothic";
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #6B8EF0;
+  padding: 8px 6px;
+  margin: 0 auto;
+}
+
+.FirstView__text02 {
+  top: auto;
+}
+
+.FirstView__video {
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.logo--header {
+  display: block;
+  text-align: center;
+}
+
+.carousel {
+  background-color: #F3F3F7;
+}
+
+footer__CopyRight {
+  color: #AEAEAE;
+  font-size: 8px;
+  font-weight: normal;
+}
+/*# sourceMappingURL=ios.css.map */

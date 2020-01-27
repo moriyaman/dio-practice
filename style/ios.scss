@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+//Premise
+$main: #6B8EF0;
+$sub: #003F70;
+$white: #FFFFFF;
+$OffWhite: #F3F3F7;
+$title: #141414;
+$text: #767676;
+$text__background: #393E42;
+$btn__background: #141414;
+
+* {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Staatliches", "Noto Sans CJK JP", "游ゴシック", "游ゴシック体", "Yu Gothic", sans-serif;
+  font-weight: bold;
+  color: $title;
+}
+
+//Text
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 14px;
+}
+h4 {
+  font-size: 12px;
+}
+h5 {
+  font-size: 10px;
+}
+p {
+  font-size: 14px;
+  font-weight: normal;
+  color: $text;
+}
+
+//Molecules
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  color: $white;
+  background-color: $btn__background;
+  margin: 24px 24px 40px;
+  padding: 12px auto;
+}
+.btn--slack {
+}
+.btn--GoogleCalender {
+}
+
+//FirstView
+.FirstView {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  &__LogoLine {
+    display: block;
+    height: 56px;
+    width: auto;
+    overflow: hidden;
+  }
+  &__logo{
+    position: absolute;
+    margin: auto;
+    top: 45%;
+    width: 193px;
+    height: 110px;
+  }
+  &__text{
+    position: absolute;
+    display: block;
+    font-family: "游ゴシック", "游ゴシック体", "Yu Gothic";
+    font-size: 14px;
+    color: $white;
+    background-color: $main;
+    padding: 8px 6px;
+    margin: 0 auto;
+    }
+  &__text01{
+  }
+  &__text02{
+    top: auto;
+  }
+  &__next{
+  }
+  &__icon{
+  }
+  &__video{
+  height: 100%;
+  left: 50%;
+  transform: translateX(0%);
+  }
+}
+
+//header
+.logo--header {
+  display: block;
+  text-align: center;
+}
+
+//Carousel
+.carousel {
+  background-color: $OffWhite;
+  &__thumbnail {
+  }
+  &__numbering {
+  }
+  &__title {
+  }
+}
+
+//Recommend
+.reccomend {
+  &__thumbnail {
+  }
+  &__featured {
+  }
+  &__title {
+  }
+  &__text {
+  }
+}
+
+//Articles
+.article {
+  &__thumbnail {
+  }
+  &__featured {
+  }
+  &__title {
+  }
+  &__text {
+  }
+}
+
+//footer
+footer {
+  &__text {
+  }
+  &__TextBorder {
+  }
+  &__FollowUs {
+  }
+  &__icon {
+  }
+  &__CopyRight {
+    color: #AEAEAE;
+    font-size: 8px;
+    font-weight: normal;
+  }
+}
+
+//navimenu
+.nav {
+}
