@@ -1,12 +1,12 @@
 @charset "UTF-8";
 * {
   overflow-x: hidden;
-  padding: 0;
   margin: 0;
 }
 
 body {
   font-family: "Staatliches", "Noto Sans CJK JP", "游ゴシック", "游ゴシック体", "Yu Gothic", sans-serif;
+  font-size: 14px;
   font-weight: bold;
   color: #141414;
 }
@@ -47,8 +47,8 @@ p {
 }
 
 .FirstView {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   margin: auto;
   position: relative;
   text-align: center;
@@ -80,29 +80,83 @@ p {
   margin: 0 auto;
 }
 
-.FirstView__text02 {
-  top: auto;
+.FirstView__text01 {
+  top: 77%;
+  left: 22%;
 }
 
-.FirstView__video {
-  height: 100%;
-  left: 50%;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+.FirstView__text02 {
+  top: 90%;
+  left: 22%;
 }
 
 .logo--header {
+  margin: 0 16px 0;
   display: block;
   text-align: center;
 }
 
 .carousel {
+  margin: 0 16px 0;
   background-color: #F3F3F7;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px;
+  overflow: hidden;
+  position: relative;
 }
 
-footer__CopyRight {
+.carousel__magazine {
+  display: inline;
+  margin: 24px 40px 0 0;
+  width: 30vh;
+  height: auto;
+}
+
+.reccomend {
+  margin: 0 16px 0;
+}
+
+.article {
+  margin: 0 16px 0;
+}
+
+.footer {
+  background-color: #141414;
+  font-weight: 400;
+}
+
+.footer__text {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__TextBorder {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__FollowUs {
+  color: #FFFFFF;
+  text-decoration: none;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.footer__icon {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__CopyRight {
   color: #AEAEAE;
   font-size: 8px;
   font-weight: normal;
+}
+
+.nav__list {
+  display: inline-block;
 }
 /*# sourceMappingURL=ios.css.map */

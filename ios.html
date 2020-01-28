@@ -3,8 +3,13 @@
 <head>
 	<meta charset='UTF-8'>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="ページの内容を表す文章" />
+	<link rel="icon" href="画像URL" sizes="62x62" type="image/png">
+	<link rel="apple-touch-icon-precomposed" href="画像のURL" />
 	<link rel="stylesheet" href="style/ress.css">
 	<link rel="stylesheet" href="style/ios.css">
+	<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+	rel="stylesheet">
 	<script>
 		(function(d) {
 			var config = {
@@ -22,8 +27,6 @@
 			try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 		})(document);
 	</script>
-	<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
-	rel="stylesheet">
     <title>DIO</title>
 </head>
 <body>
@@ -42,8 +45,8 @@
 	</div>
 	<div>
         <img src="./images/w-logo.svg" alt="DIO" class="FirstView__logo">
-		<span class="FirstView__text FirstView__text01">自らの足で踏み出すチームが</span>
-		<span class="FirstView__text FirstView__text02">自らの意思で組織を変えるために</span>
+		<p class="FirstView__text FirstView__text01">自らの足で踏み出すチームが</p>
+		<p class="FirstView__text FirstView__text02">自らの意思で組織を変えるために</p>
 		<a href="#" class="FirstView__next">SCROLL</a>
 		<a href="#" class="FirstView__icon"><img src="images/fv__icon.svg"></a>
 	</div>
@@ -55,55 +58,55 @@
 </header>
 <section>
 	<ul class="carousel">
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
 			alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.9</h5>
 			<h3 class="carousel__title">上司と部下2.0</h3>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
 			alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.8</h5>
 			<h3 class="carousel__title">ゆとりな働き方</p>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.07</p>
 			<h3 class="carousel__title">経営とアート</h3>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.06</p>
 			<h3 class="carousel__title">ニューエリート</p>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.05</p>
 			<h3 class="carousel__title">働き方改革大全</p>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.04</p>
 			<h3 class="carousel__title">起業家マインド 02</h3>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.03</p>
 			<h3 class="carousel__title">起業家マインド 01</h3>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.02</p>
 			<h3 class="carousel__title">本音が言える関係作り</h3>
 		</li>
-		<li>
+		<li class="carousel__magazine">
 			<img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="sample" width="129" height="192">
 			<h5 class="carousel__numbering">No.01</p>
@@ -175,50 +178,49 @@
 	</div>
 </section>
 <footer>
-	<div>
-		<a href="#" class="footer__text">プライバシーポリシー</a>
-		<p class="footer__TextBorder">|</p>
-		<a href="#" class="footer__text">個人情報の取扱に関する告知文</a>
-		<p class="footer__TextBorder">|</p>
-		<a href="#" class="footer__text">私たちについて</a>
-		<p class="footer__TextBorder">|</p>
-		<a href="#" class="footer__text">お問い合わせ</a>
+	<div class="footer">
+		<div>
+			<a href="#" class="footer__text">プライバシーポリシー</a>
+			<a href="#" class="footer__text">個人情報の取扱に関する告知文</a>
+			<a href="#" class="footer__text">私たちについて</a>
+			<a href="#" class="footer__text">お問い合わせ</a>
+		</div>
+		<div>
+			<a href="#" class="footer__FollowUs">Follow Us</a>
+			<a href="#" class="footer__icon">
+				<img src="./images/icon_fb.svg">
+			</a>
+			<a href="#" class="footer__icon">
+				<img src="./images/icon_tw.svg">
+			</a>
+			<a href="#" class="footer__icon">
+				<img src="./images/icon_cart.svg">
+			</a>
+			<a href="#" class="footer__icon">
+				<img src="./images/icon_note.svg">
+			</a>
+		</div>
+		<p class="CopyRight">©2020 DIO. All Rights Reserved.</p>
 	</div>
-	<div>
-		<a href="#" class="FollowUs">Follow Us</a>
-		<a href="#" class="footer__icon">
-			<img src="./images/icon_fb.svg">
-		</a>
-		<a href="#" class="footer__icon">
-			<img src="./images/icon_tw.svg">
-		</a>
-		<a href="#" class="footer__icon">
-			<img src="./images/icon_cart.svg">
-		</a>
-		<a href="#" class="footer__icon">
-			<img src="./images/icon_note.svg">
-		</a>
-	</div>
-	<p class="CopyRight">©2020 DIO. All Rights Reserved.</p>
 </footer>
 <nav>
     <ul>
-        <li>
+        <li class="nav__list">
 			<a href="#">
 				<p>ALL</p>
 			</a>
 		</li>
-        <li>
+        <li class="nav__list">
 			<a href="#">
 				<p>REVIEW</p>
 			</a>
 		</li>
-        <li>
+        <li class="nav__list">
 			<a href="#">
 				<p>ACTION</p>
 			</a>
 		</li>
-		<li>
+		<li class="nav__list"class="nav__list">
 			<a href="#">PREPARATION</a>
 		</li>
     </ul>
