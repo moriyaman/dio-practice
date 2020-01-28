@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Staatliches", "Noto Sans CJK JP", "游ゴシック", "游ゴシック体", "Yu Gothic", sans-serif;
+  font-family: "Noto Sans CJK JP", sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   color: #141414;
 }
 
@@ -39,7 +39,7 @@ p {
 
 .btn {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   color: #FFFFFF;
   background-color: #141414;
   margin: 24px 24px 40px;
@@ -47,6 +47,7 @@ p {
 }
 
 .FirstView {
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   margin: auto;
@@ -56,15 +57,15 @@ p {
 
 .FirstView__LogoLine {
   display: block;
-  height: 56px;
+  height: 48px;
   width: auto;
   overflow: hidden;
 }
 
 .FirstView__logo {
   position: absolute;
-  margin: auto;
-  top: 45%;
+  left: 25%;
+  top: 38%;
   width: 193px;
   height: 110px;
 }
@@ -76,54 +77,139 @@ p {
   font-size: 14px;
   color: #FFFFFF;
   background-color: #6B8EF0;
-  padding: 8px 6px;
+  padding: 3px 6px;
   margin: 0 auto;
+  letter-spacing: 1px;
 }
 
 .FirstView__text01 {
-  top: 77%;
-  left: 22%;
+  top: 55%;
+  left: 23%;
 }
 
 .FirstView__text02 {
-  top: 90%;
-  left: 22%;
+  top: 60%;
+  left: 19%;
 }
 
-.logo--header {
-  margin: 0 16px 0;
-  display: block;
-  text-align: center;
+.FirstView__next {
+  font-family: "Staatliches";
+  position: absolute;
+  top: 90.5%;
+  right: 40%;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
-.carousel {
-  margin: 0 16px 0;
-  background-color: #F3F3F7;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px;
-  overflow: hidden;
+.FirstView__icon {
+  position: absolute;
+  top: 95%;
+  right: 46%;
+}
+
+.FirstView__video {
+  position: absolute;
+  top: -15%;
+  z-index: -1;
+}
+
+.header {
   position: relative;
 }
 
-.carousel__magazine {
-  display: inline;
-  margin: 24px 40px 0 0;
-  width: 30vh;
-  height: auto;
+.header__logo {
+  margin: 10px 45%;
+  width: 43.25px;
+  height: 25px;
 }
 
-.reccomend {
+.header__menu {
+  position: absolute;
+  right: 5%;
+  top: 35%;
+}
+
+.carousel {
+  background-color: #F3F3F7;
+  margin: 0px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel__magazine {
+  margin: 24px 20px 0 20px;
+  width: 128px;
+}
+
+.recommend {
   margin: 0 16px 0;
+}
+
+.recommend__thumbnail {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.recommend__featured {
+  background-color: #393E42;
+  padding: 6px 8px;
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 22px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 12px;
+}
+
+.recommend__title {
+  margin-top: 8px;
+}
+
+.recommend__text {
+  margin-top: 8px;
+}
+
+.recommend__icon {
+  margin: 16px 44% 8px;
 }
 
 .article {
   margin: 0 16px 0;
 }
 
+.article__thumbnail {
+  margin-top: 56PX;
+}
+
+.article__featured {
+  background-color: #393E42;
+  padding: 6px 8px;
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 22px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 12px;
+}
+
+.article__title {
+  margin-top: 8px;
+}
+
+.article__text {
+  margin-top: 8px;
+}
+
 .footer {
+  margin-top: 64px;
   background-color: #141414;
   font-weight: 400;
 }
@@ -157,6 +243,7 @@ p {
 }
 
 .nav__list {
+  font-family: "Staatliches";
   display: inline-block;
 }
 /*# sourceMappingURL=ios.css.map */
