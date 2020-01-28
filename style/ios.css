@@ -242,8 +242,35 @@ p {
   font-weight: normal;
 }
 
+.nav {
+  background-color: #fff;
+  border-top: 1px solid #d9e4e6;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  -webkit-transition: left .3s;
+  transition: left .3s;
+}
+
+.nav__contents {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .nav__list {
-  font-family: "Staatliches";
   display: inline-block;
+}
+
+.nav__link {
+  font-family: "Staatliches";
+  font-size: 18px;
+  color: #141414;
+  text-decoration: none;
 }
 /*# sourceMappingURL=ios.css.map */

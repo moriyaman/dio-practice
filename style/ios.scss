@@ -232,8 +232,25 @@ p {
 
 //navimenu
 .nav {
+  background-color: #fff;
+  border-top: 1px solid #d9e4e6;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  transition: left .3s;
+  &__contents{
+    align-items: center;
+    display: flex;
+  }
   &__list{
-    font-family: "Staatliches";
     display: inline-block;
+  }
+  &__link{
+    font-family: "Staatliches";
+    font-size: 18px;
+    color: $black;
+    text-decoration: none;
   }
 }
