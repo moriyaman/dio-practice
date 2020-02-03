@@ -1,0 +1,141 @@
+* {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans CJK JP", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #141414;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+h5 {
+  font-size: 10px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: normal;
+  color: #767676;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #141414;
+  margin: 24px 24px 40px;
+  padding: 12px auto;
+}
+
+.header {
+  position: relative;
+}
+
+.header__logo {
+  margin: 10px 45%;
+  width: 43.25px;
+  height: 25px;
+}
+
+.header__menu {
+  position: absolute;
+  right: 5%;
+  top: 35%;
+}
+
+.magazine {
+  position: relative;
+}
+
+.magazine__top {
+  width: 100vh;
+  height: 381px;
+  margin-bottom: 16px;
+}
+
+.magazine__BlurBackGround {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.magazine__thumbnail {
+  position: absolute;
+  top: 4%;
+  left: 21%;
+}
+
+.magazine__text {
+  margin: 0px 16px;
+}
+
+.footer {
+  margin-top: 64px;
+  background-color: #272727;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__element01 {
+  margin: 28px 0px 32px 16px;
+}
+
+.footer__element02 {
+  margin: -42px 0px 102px 0px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.footer__element03 {
+  margin: 19px 16px 54px 80px;
+}
+
+.footer__text {
+  color: #FFFFFF;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer__FollowUs {
+  font-size: 10px;
+  font-weight: normal;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__CopyRight {
+  color: #AEAEAE;
+  font-size: 8px;
+  font-weight: normal;
+  margin: 25px 0px 32px 0px;
+}
+
+.footer__icon {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 8px 0;
+  display: block;
+}
+/*# sourceMappingURL=magazine_sp.css.map */

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+//Premise
+$main: #6B8EF0;
+$sub: #003F70;
+$white: #FFFFFF;
+$OffWhite: #F3F3F7;
+$black: #141414;
+$gray: #767676;
+$DarkGray: #393E42;
+* {
+  overflow-x: hidden;
+  margin: 0;
+}
+body {
+  font-family: "Noto Sans CJK JP", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: $black;
+}
+
+//Text
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 14px;
+}
+h4 {
+  font-size: 12px;
+}
+h5 {
+  font-size: 10px;
+}
+p {
+  font-size: 14px;
+  font-weight: normal;
+  color: $gray;
+}
+
+//Molecules
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+  background-color: $black;
+  margin: 24px 24px 40px;
+  padding: 12px auto;
+}
+.btn--slack {
+}
+.btn--GoogleCalender {
+}
+
+//header
+.header{
+  position: relative;
+  &__logo {
+    margin: 10px 45%;
+    width: 43.25px;
+    height: 25px;
+  }
+  &__menu{
+    position: absolute;
+    right: 5%;
+    top: 35%;
+  }
+}
+
+//magazine
+.magazine{
+  position: relative;
+  &__top{
+  width: 100vh;
+  height: 381px;
+  margin-bottom: 16px;
+  }
+  &__BlurBackGround{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__thumbnail{
+    position: absolute;
+    top: 4%;
+    left: 21%;
+  }
+  &__text{
+    margin: 0px 16px;
+  }
+}
+
+//agenda
+.agenda{
+}
+
+//AllMagazines
+.AllMagazines{
+}
+
+//footer
+.footer {
+  margin-top: 64px;
+  background-color: #272727;
+  font-weight: 400;
+  display: flex;
+  &__element01 {
+    margin: 28px 0px 32px 16px;
+  }
+  &__element02 {
+    margin: -42px 0px 102px 0px;
+    transform: rotate(90deg);
+  }
+  &__element03 {
+    margin: 19px 16px 54px 80px;
+  }
+  &__text {
+    color: $white;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+  }
+  &__FollowUs {
+    font-size: 10px;
+    font-weight: normal;
+    color: $white;
+    text-decoration: none;
+  }
+  &__CopyRight {
+    color: #AEAEAE;
+    font-size: 8px;
+    font-weight: normal;
+    margin: 25px 0px 32px 0px;
+  }
+  &__icon {
+    color: $white;
+    text-decoration: none;
+    margin: 8px 0;
+    display: block;
+  }
+}
