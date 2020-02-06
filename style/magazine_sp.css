@@ -1,13 +1,15 @@
+@charset "UTF-8";
 * {
   overflow-x: hidden;
   margin: 0;
 }
 
 body {
-  font-family: "Noto Sans CJK JP", sans-serif;
+  font-family: "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #141414;
+  background-color: #F3F3F7;
 }
 
 h1 {
@@ -37,58 +39,212 @@ p {
 }
 
 .btn {
+  display: block;
+  width: 327px;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
   color: #FFFFFF;
   background-color: #141414;
-  margin: 24px 24px 40px;
-  padding: 12px auto;
+  margin: 24px auto auto;
+  padding: 14px 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .header {
+  /*position: fixed;*/
+}
+
+.header__header {
   position: relative;
+  height: 46px;
+  background-color: #FFFFFF;
 }
 
 .header__logo {
-  margin: 10px 45%;
+  position: absolute;
   width: 43.25px;
-  height: 25px;
+  margin: 11px auto;
+  right: 0;
+  left: 0;
 }
 
 .header__menu {
   position: absolute;
-  right: 5%;
-  top: 35%;
+  right: 17px;
+  margin: 18px 0;
 }
 
 .magazine {
   position: relative;
+  height: 738px;
+  background-color: #FFFFFF;
+  margin-bottom: 32px;
 }
 
 .magazine__top {
-  width: 100vh;
   height: 381px;
-  margin-bottom: 16px;
+  overflow: hidden;
 }
 
-.magazine__BlurBackGround {
-  position: absolute;
-  top: 0;
-  right: 0;
+.magazine__BackGround {
+  width: 100%;
 }
 
 .magazine__thumbnail {
   position: absolute;
-  top: 4%;
-  left: 21%;
+  right: 0;
+  left: 0;
+  margin: 23px auto;
+}
+
+.magazine__sentence {
+  margin: auto;
+  text-align: justify;
+  width: 343px;
+}
+
+.magazine__featured {
+  margin-top: 16px;
 }
 
 .magazine__text {
-  margin: 0px 16px;
+  font-weight: lighter;
+  margin-top: 16px;
+  line-height: 21px;
+}
+
+.agenda {
+  position: relative;
+  height: 368px;
+  background-color: #FFFFFF;
+  margin-bottom: 32px;
+}
+
+.agenda__agenda {
+  position: relative;
+  height: 26px;
+  margin-bottom: 12px;
+}
+
+.agenda__text {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+}
+
+.agenda__icon {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+.agenda__hr {
+  width: 357px;
+  height: 1px;
+  border-style: solid;
+  background-color: #DEDEDE;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-bottom: 8px;
+  border: none;
+}
+
+.agenda__article {
+  position: relative;
+  width: 349px;
+  height: 61px;
+  margin: auto;
+  margin-bottom: 8px;
+}
+
+.agenda__numbering {
+  position: absolute;
+  font-size: 18px;
+  color: #003F70;
+  left: 0;
+  margin: 17px 0;
+}
+
+.agenda__title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 27px;
+  font-size: 14px;
+  width: 166px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.agenda__thumbnail {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 140px;
+  height: 61px;
+}
+
+.AllMagazines {
+  height: 999px;
+  background-color: #FFFFFF;
+}
+
+.AllMagazines__AllBlocks {
+  height: 920px;
+  margin-top: 48px;
+}
+
+.AllMagazines__block {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  width: 98px;
+  height: 206px;
+  margin: 0 12px 21px;
+}
+
+.AllMagazines__thumbnail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 98px;
+  height: 147px;
+  -webkit-filter: drop-shadow(0px 0px 6px #BFBFBF);
+          filter: drop-shadow(0px 0px 6px #BFBFBF);
+}
+
+.AllMagazines__numbering {
+  position: absolute;
+  top: 153px;
+  right: 0;
+  font-size: 10px;
+  width: 98px;
+}
+
+.AllMagazines__title {
+  position: absolute;
+  top: 170px;
+  right: 0;
+  width: 98px;
+  height: 36px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer {
-  margin-top: 64px;
   background-color: #272727;
   font-weight: 400;
   display: -webkit-box;
@@ -97,17 +253,17 @@ p {
 }
 
 .footer__element01 {
-  margin: 28px 0px 32px 16px;
+  margin: 28px 0px 0px 16px;
 }
 
 .footer__element02 {
-  margin: -42px 0px 102px 0px;
+  margin: -43px 0px 71px 0px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
 .footer__element03 {
-  margin: 19px 16px 54px 80px;
+  margin: 19px 0px 0px 80px;
 }
 
 .footer__text {

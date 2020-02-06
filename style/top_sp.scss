@@ -14,7 +14,7 @@ $DarkGray: #393E42;
   margin: 0;
 }
 body {
-  font-family: "Noto Sans CJK JP", sans-serif;
+  font-family: "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: $black;
@@ -70,45 +70,53 @@ p {
     width: auto;
     overflow: hidden;
   }
-  &__logo{
+  &__items{
+    height: 65%;
     position: absolute;
+    top: 35%;
+    right: 0;
+    left: 0;
+  }
+  &__logo{
     left: 25%;
     top: 38%;
     width: 193px;
     height: 110px;
   }
   &__text{
-    position: absolute;
     display: block;
-    font-family: "游ゴシック", "游ゴシック体", "Yu Gothic";
+    font-family: "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
     font-size: 14px;
     color: $white;
     background-color: $main;
-    padding: 3px 6px;
     margin: 0 auto;
     letter-spacing: 1px;
+    padding: 3px 5px;
+    margin-top: 12px;
     }
   &__text01{
-    top: 55%;
-    left: 23%;
+    width: 205px;
   }
   &__text02{
-    top: 60%;
-    left: 19%;
+    width: 235px;
   }
   &__next{
-    font-family: "Staatliches";
-    position: absolute;
-    top: 90.5%;
-    right: 40%;
+    font-family: "Staatliches", "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
     font-size: 24px;
     color: $white;
     text-decoration: none;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 56px;
   }
   &__icon{
     position: absolute;
-    top: 95%;
-    right: 46%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 36px;
   }
   &__video{
     position: absolute;
@@ -120,22 +128,25 @@ p {
 //header
 .header{
   position: relative;
+  height: 46px;
   &__logo {
-    margin: 10px 45%;
+    position: absolute;
     width: 43.25px;
-    height: 25px;
+    margin: 11px auto;
+    right: 0;
+    left: 0;
   }
   &__menu{
     position: absolute;
-    right: 5%;
-    top: 35%;
+    right: 17px;
+    margin: 18px 0;
   }
 }
 
 //Carousel
 .carousel {
   background-color: $OffWhite;
-  margin: 0px;
+  margin: 0;
   position: relative;
   width: fit-content;
   display: flex;
@@ -261,7 +272,7 @@ p {
     margin: auto;
   }
   &__link{
-    font-family: "Staatliches";
+    font-family: "Staatliches", "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
     font-size: 18px;
     color: $black;
     text-decoration: none;

@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Noto Sans CJK JP", sans-serif;
+  font-family: "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #141414;
@@ -62,8 +62,15 @@ p {
   overflow: hidden;
 }
 
-.FirstView__logo {
+.FirstView__items {
+  height: 65%;
   position: absolute;
+  top: 35%;
+  right: 0;
+  left: 0;
+}
+
+.FirstView__logo {
   left: 25%;
   top: 38%;
   width: 193px;
@@ -71,41 +78,43 @@ p {
 }
 
 .FirstView__text {
-  position: absolute;
   display: block;
-  font-family: "游ゴシック", "游ゴシック体", "Yu Gothic";
+  font-family: "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 14px;
   color: #FFFFFF;
   background-color: #6B8EF0;
-  padding: 3px 6px;
   margin: 0 auto;
   letter-spacing: 1px;
+  padding: 3px 5px;
+  margin-top: 12px;
 }
 
 .FirstView__text01 {
-  top: 55%;
-  left: 23%;
+  width: 205px;
 }
 
 .FirstView__text02 {
-  top: 60%;
-  left: 19%;
+  width: 235px;
 }
 
 .FirstView__next {
-  font-family: "Staatliches";
-  position: absolute;
-  top: 90.5%;
-  right: 40%;
+  font-family: "Staatliches", "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 24px;
   color: #FFFFFF;
   text-decoration: none;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 56px;
 }
 
 .FirstView__icon {
   position: absolute;
-  top: 95%;
-  right: 46%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 36px;
 }
 
 .FirstView__video {
@@ -116,23 +125,26 @@ p {
 
 .header {
   position: relative;
+  height: 46px;
 }
 
 .header__logo {
-  margin: 10px 45%;
+  position: absolute;
   width: 43.25px;
-  height: 25px;
+  margin: 11px auto;
+  right: 0;
+  left: 0;
 }
 
 .header__menu {
   position: absolute;
-  right: 5%;
-  top: 35%;
+  right: 17px;
+  margin: 18px 0;
 }
 
 .carousel {
   background-color: #F3F3F7;
-  margin: 0px;
+  margin: 0;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -281,7 +293,7 @@ p {
 }
 
 .nav__link {
-  font-family: "Staatliches";
+  font-family: "Staatliches", "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 18px;
   color: #141414;
   text-decoration: none;

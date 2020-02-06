@@ -13,10 +13,11 @@ $DarkGray: #393E42;
   margin: 0;
 }
 body {
-  font-family: "Noto Sans CJK JP", sans-serif;
+  font-family: "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: $black;
+  background-color: $OffWhite;
 }
 
 //Text
@@ -43,12 +44,18 @@ p {
 
 //Molecules
 .btn {
+  display: block;
+  width: 327px;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
   color: $white;
   background-color: $black;
-  margin: 24px 24px 40px;
-  padding: 12px auto;
+  margin: 24px auto auto;
+  padding: 14px 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 .btn--slack {
 }
@@ -57,65 +64,184 @@ p {
 
 //header
 .header{
+  /*position: fixed;*/
+  &__header{
   position: relative;
+  height: 46px;
+  background-color: $white;
+  }
   &__logo {
-    margin: 10px 45%;
+    position: absolute;
     width: 43.25px;
-    height: 25px;
+    margin: 11px auto;
+    right: 0;
+    left: 0;
   }
   &__menu{
     position: absolute;
-    right: 5%;
-    top: 35%;
+    right: 17px;
+    margin: 18px 0;
   }
 }
 
 //magazine
 .magazine{
   position: relative;
+  height: 738px;
+  background-color: $white;
+  margin-bottom: 32px;
   &__top{
-  width: 100vh;
-  height: 381px;
-  margin-bottom: 16px;
+  height:  381px;
+  overflow: hidden;
   }
-  &__BlurBackGround{
-    position: absolute;
-    top: 0;
-    right: 0;
+  &__BackGround{
+    width: 100%;
   }
   &__thumbnail{
     position: absolute;
-    top: 4%;
-    left: 21%;
+    right: 0;
+    left: 0;
+    margin: 23px auto;
+  }
+  &__sentence{
+    margin: auto;
+    text-align: justify;
+    width: 343px;
+  }
+  &__featured{
+    margin-top: 16px;
+  }
+  &__title{
   }
   &__text{
-    margin: 0px 16px;
+    font-weight: lighter;
+    margin-top: 16px;
+    line-height: 21px;
   }
 }
 
 //agenda
 .agenda{
+  position: relative;
+  height: 368px;
+  background-color: $white;
+  margin-bottom: 32px;
+  &__agenda{
+    position: relative;
+    height: 26px;
+    margin-bottom: 12px;
+  }
+  &__text{
+    position: absolute;
+    top: 10px;
+    left: 16px;
+  }
+  &__icon{
+    position: absolute;
+    top: 16px;
+    right: 24px;
+  }
+  &__hr{
+    width: 357px;
+    height: 1px;
+    border-style: solid;
+    background-color: #DEDEDE;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-bottom: 8px;
+    border: none;
+  }
+  &__article{
+    position: relative;
+    width: 349px;
+    height: 61px;
+    margin: auto;
+    margin-bottom: 8px;
+  }
+  &__numbering{
+    position: absolute;
+    font-size: 18px;
+    color: #003F70;
+    left: 0;
+    margin: 17px 0;
+  }
+  &__title{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 27px;
+    font-size: 14px;
+    width: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__thumbnail{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 140px;
+    height: 61px;
+  }
 }
 
 //AllMagazines
 .AllMagazines{
+  height: 999px;
+  background-color: $white;
+  &__AllBlocks{
+    height: 920px;
+    margin-top: 48px;
+  }
+  &__block{
+    display: inline-flex;
+    position: relative;
+    width: 98px;
+    height: 206px;
+    margin: 0 12px 21px;
+  }
+  &__thumbnail{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 98px;
+    height: 147px;
+    filter: drop-shadow(0px 0px 6px #BFBFBF);
+  }
+  &__numbering{
+    position: absolute;
+    top: 153px;
+    right: 0;
+    font-size: 10px;
+    width: 98px;
+  }
+  &__title{
+    position: absolute;
+    top: 170px;
+    right: 0;
+    width: 98px;
+    height: 36px;
+    justify-content: center;
+  }
 }
 
 //footer
 .footer {
-  margin-top: 64px;
   background-color: #272727;
   font-weight: 400;
   display: flex;
+  &__element{
+  }
   &__element01 {
-    margin: 28px 0px 32px 16px;
+    margin: 28px 0px 0px 16px;
   }
   &__element02 {
-    margin: -42px 0px 102px 0px;
+    margin: -43px 0px 71px 0px;
     transform: rotate(90deg);
   }
   &__element03 {
-    margin: 19px 16px 54px 80px;
+    margin: 19px 0px 0px 80px;
   }
   &__text {
     color: $white;
