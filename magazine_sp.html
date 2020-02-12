@@ -6,10 +6,12 @@
 	<meta name="description" content="ページの内容を表す文章" />
 	<link rel="icon" href="画像URL" sizes="62x62" type="image/png">
 	<link rel="apple-touch-icon-precomposed" href="画像のURL" />
-	<link rel="stylesheet" href="style/ress.css">
-	<link rel="stylesheet" href="style/magazine_sp.css">
+  <link rel="stylesheet" href="style/ress.css">
+  <link rel="stylesheet" href="style/magazine_sp.css">
+  <link rel="stylesheet" href="style/magazine_sp.css"
+  media="screen and (max-width:560px) and (max-width:960px)">
 	<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
-	rel="stylesheet">
+  rel="stylesheet">
 	<script>
 		(function(d) {
 			var config = {
@@ -31,140 +33,137 @@
 </head>
 <body>
 <header>
-	<div class="header__header">
 	<img src="./images/logo.svg" alt="DIO" class="header__logo">
 	<img src="./images/menu.svg" alt="menu" class="header__menu">
-	</div>
 </header>
 <section class="magazine">
-    <div class="magazine__top">
+    <div class="magazine__headline">
       <img class="magazine__BackGround" src="images/BlurBackGround.png" alt="background">
       <img class="magazine__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
     </div>
-    <div class="magazine__sentence">
-      <h3 class="magazine__featured">No.10</h3>
-      <h2 class="maghazine__title">「最高のチーム」のベースづくり</h2>
-      <p class="magazine__text">
-        最高のチームにしていくための「基礎体力」を高めるために必要な5つのアクションです。特にチーム改善のファーストステップ、チーム結成初期に取り組むことで、その後のアクションの効果が飛躍的に高まるでしょう。2〜5は定期的に行うことで、チームの結束を維持する効果もあります。スポーツ選手が自身の身体を鍛える基礎トレーニングのようなアクションと言えるでしょう。
-      </p>
+    <div class="magazine__main">
+      <div class="magazine__sentence">
+        <h2 class="magazine__numbering">No.10</h2>
+        <h1 class="maghazine__title">「最高のチーム」のベースづくり</h1>
+        <p class="magazine__text">
+          最高のチームにしていくための「基礎体力」を高めるために必要な5つのアクションです。特にチーム改善のファーストステップ、チーム結成初期に取り組むことで、その後のアクションの効果が飛躍的に高まるでしょう。2〜5は定期的に行うことで、チームの結束を維持する効果もあります。スポーツ選手が自身の身体を鍛える基礎トレーニングのようなアクションと言えるでしょう。
+        </p>
+      </div>
+      <a href="#" class="btn">始めから読む</a>
     </div>
-    <a href="#" class="btn">始めから読む</a>
 </section>
 <section class="agenda">
-  <div class="agenda__agenda">
-    <h4 class="agenda__text">目次</h4>
+  <div class="agenda__headline">
+    <label class="agenda__text">目次</label>
     <img class="agenda__icon" src="images/agenda__icon.svg" alt="">
   </div>
-  <hr class="agenda__hr">
-  <div class="agenda__article">
-
-    <h5 class="agenda__numbering">1</h5>
-    <h5 class="agenda__title">チームのビジョンをメンバー全員で決める</h5>
-    <img class="agenda__thumbnail" src="images/article.png" alt="">
-  </div>
-  <hr class="agenda__hr">
-  <div class="agenda__article">
-
-    <h5 class="agenda__numbering">2</h5>
-    <h5 class="agenda__title">価値観ワークでメンバー同士の理解を深める</h5>
-    <img class="agenda__thumbnail" src="images/article.png" alt="">
-  </div>
-  <hr class="agenda__hr">
-  <div class="agenda__article">
-
-    <h5 class="agenda__numbering">3</h5>
-    <h5 class="agenda__title">自分史を伝え合い、さらけ出し合う土壌を作る</h5>
-    <img class="agenda__thumbnail" src="images/article.png" alt="">
-  </div>
-  <hr class="agenda__hr">
-  <div class="agenda__article">
-
-    <h5 class="agenda__numbering">4</h5>
-    <h5 class="agenda__title">自分史を伝え合い、さらけ出し合う土壌を作る
-    </h5>
-    <img class="agenda__thumbnail" src="images/article.png" alt="">
-  </div>
+  <ul class="agenda__list">
+    <li class="agenda__item">
+      <h3 class="agenda__numbering">1</h3>
+      <h2 class="agenda__title">チームのビジョンをメンバー全員で決める</h2>
+      <img class="agenda__thumbnail" src="images/article.png" alt="">
+    </li>
+    <li class="agenda__item">
+      <h3 class="agenda__numbering">2</h3>
+      <h2 class="agenda__title">価値観ワークでメンバー同士の理解を深める</h2>
+      <img class="agenda__thumbnail" src="images/article.png" alt="">
+    </li>
+    <li class="agenda__item">
+      <h3 class="agenda__numbering">3</h3>
+      <h2 class="agenda__title">自分史を伝え合い、さらけ出し合う土壌を作る</h2>
+      <img class="agenda__thumbnail" src="images/article.png" alt="">
+    </li>
+    <li class="agenda__item">
+      <h3 class="agenda__numbering">4</h3>
+      <h2 class="agenda__title">価値観ワークでさらけ出し合う土壌を作る</h2>
+      <img class="agenda__thumbnail" src="images/article.png" alt="">
+    </li>
+  </ul>
 </section>
 <section class="AllMagazines">
   <ul class="AllMagazines__AllBlocks">
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
     <li class="AllMagazines__block">
       <img class="AllMagazines__thumbnail" src="images/thumbnail.svg" alt="thumbnail">
-      <h5 class="AllMagazines__numbering">No.10</h5>
-      <h6 class="AllMagazines__title">「最高のチーム」のベースづくり</h6>
+      <h4 class="AllMagazines__numbering">No.10</h4>
+      <h3 class="AllMagazines__title">「最高のチーム」のベースづくり</h3>
     </li>
   </ul>
 </section>
 <footer>
 	<div class="footer">
-      <div class="footer__element01">
-        <a href="#" class="footer__text">プライバシーポリシー</a>
-        <a href="#" class="footer__text">個人情報の取扱に関する告知文</a>
-        <a href="#" class="footer__text">私たちについて</a>
-        <a href="#" class="footer__text">お問い合わせ</a>
-        <p class="footer__CopyRight">©2020 DIO. All Rights Reserved.</p>
-      </div>
-      <div class="footer__element02">
-        <a href="#" class="footer__FollowUs">Follow Us</a>
-      </div>
-      <div class="footer__element03">
-        <a href="#" class="footer__icon">
-          <img src="./images/icon_fb.svg">
-        </a>
-        <a href="#" class="footer__icon">
-          <img src="./images/icon_tw.svg">
-        </a>
-        <a href="#" class="footer__icon">
-          <img src="./images/icon_cart.svg">
-        </a>
-        <a href="#" class="footer__icon">
-          <img src="./images/icon_note.svg">
-        </a>
-      </div>
+    <div class="footer__LogoWrapper"><img class="footer__logo" src="images/w-logo.svg" alt="DIO"></div>
+    <div class="footer__link">
+      <a href="#" class="footer__text">プライバシーポリシー</a>
+      <p class="footer__border">|</p>
+      <a href="#" class="footer__text">個人情報の取扱に関する告知文</a>
+      <p class="footer__border">|</p>
+      <a href="#" class="footer__text">私たちについて</a>
+      <p class="footer__border">|</p>
+      <a href="#" class="footer__text">お問い合わせ</a>
+      <p class="footer__CopyRight">©2020 DIO. All Rights Reserved.</p>
+    </div>
+    <div class="footer__SocialText">
+      <a href="#" class="footer__FollowUs">Follow Us</a>
+    </div>
+    <div class="footer__SocialIcon">
+      <a href="#" class="footer__icon">
+        <img src="./images/icon_fb.svg">
+      </a>
+      <a href="#" class="footer__icon">
+        <img src="./images/icon_tw.svg">
+      </a>
+      <a href="#" class="footer__icon">
+        <img src="./images/icon_cart.svg">
+      </a>
+      <a href="#" class="footer__icon">
+        <img src="./images/icon_note.svg">
+      </a>
+    </div>
 	</div>
 </footer>
 </body>

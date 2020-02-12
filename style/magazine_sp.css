@@ -13,23 +13,43 @@ body {
 }
 
 h1 {
-  font-size: 20px;
-}
-
-h2 {
   font-size: 18px;
 }
 
-h3 {
+@media screen and (min-width: 960px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+h2 {
   font-size: 14px;
 }
 
-h4 {
+@media screen and (min-width: 960px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h3 {
   font-size: 12px;
 }
 
-h5 {
+@media screen and (min-width: 960px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+h4 {
   font-size: 10px;
+}
+
+@media screen and (min-width: 960px) {
+  h4 {
+    font-size: 16px;
+  }
 }
 
 p {
@@ -38,32 +58,54 @@ p {
   color: #767676;
 }
 
+@media screen and (min-width: 960px) {
+  p {
+    font-size: 18px;
+  }
+}
+
 .btn {
   display: block;
-  width: 327px;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   color: #FFFFFF;
   background-color: #141414;
-  margin: 24px auto auto;
+  margin: 24px 8px 40px;
   padding: 14px 0;
   left: 0;
   right: 0;
   text-align: center;
 }
 
-.header {
-  /*position: fixed;*/
+@media screen and (min-width: 960px) {
+  .btn {
+    font-size: 18px;
+    width: 382px;
+    margin: 72px auto 136px;
+  }
 }
 
-.header__header {
+header {
   position: relative;
   height: 46px;
   background-color: #FFFFFF;
 }
 
-.header__logo {
+@media screen and (min-width: 560px) {
+  header {
+    width: 50%;
+    margin-left: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    height: 103px;
+  }
+}
+
+header .header__logo {
   position: absolute;
   width: 43.25px;
   margin: 11px auto;
@@ -71,26 +113,59 @@ p {
   left: 0;
 }
 
-.header__menu {
+@media screen and (min-width: 960px) {
+  header .header__logo {
+    width: 96px;
+    margin-top: 21px;
+  }
+}
+
+header .header__menu {
   position: absolute;
   right: 17px;
   margin: 18px 0;
 }
 
 .magazine {
+  overflow-y: hidden;
   position: relative;
-  height: 738px;
   background-color: #FFFFFF;
   margin-bottom: 32px;
 }
 
-.magazine__top {
+@media screen and (min-width: 560px) {
+  .magazine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    top: -46px;
+    z-index: -1000;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .magazine {
+    top: -103px;
+  }
+}
+
+.magazine__headline {
   height: 381px;
   overflow: hidden;
 }
 
+@media screen and (min-width: 560px) {
+  .magazine__headline {
+    display: block;
+    width: 50%;
+    height: auto;
+  }
+}
+
 .magazine__BackGround {
   width: 100%;
+  height: 100%;
 }
 
 .magazine__thumbnail {
@@ -100,33 +175,96 @@ p {
   margin: 23px auto;
 }
 
+@media screen and (min-width: 560px) {
+  .magazine__thumbnail {
+    top: 0;
+    left: 14%;
+    right: unset;
+  }
+}
+
+.magazine__main {
+  margin: auto;
+  padding: 0 16px;
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 560px) {
+  .magazine__main {
+    margin: auto;
+    padding: 0 24px;
+    width: 50%;
+    margin-top: 46px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .magazine__main {
+    margin-top: 136px;
+    padding: 0 48px;
+  }
+}
+
 .magazine__sentence {
   margin: auto;
   text-align: justify;
-  width: 343px;
 }
 
-.magazine__featured {
+.magazine__numbering {
   margin-top: 16px;
+}
+
+@media screen and (min-width: 960px) {
+  .magazine__numbering {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .magazine__title {
+    margin-bottom: 32px;
+  }
 }
 
 .magazine__text {
   font-weight: lighter;
   margin-top: 16px;
-  line-height: 21px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+@media screen and (min-width: 960px) {
+  .magazine__text {
+    line-height: 40px;
+  }
 }
 
 .agenda {
   position: relative;
+  top: -33px;
   height: 368px;
   background-color: #FFFFFF;
   margin-bottom: 32px;
 }
 
-.agenda__agenda {
+@media screen and (min-width: 960px) {
+  .agenda {
+    height: initial;
+    top: -135px;
+  }
+}
+
+.agenda__headline {
   position: relative;
-  height: 26px;
+  height: 34px;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 960px) {
+  .agenda__headline {
+    height: 50px;
+    margin: 48px 0 12px 0;
+  }
 }
 
 .agenda__text {
@@ -141,40 +279,59 @@ p {
   right: 24px;
 }
 
-.agenda__hr {
-  width: 357px;
-  height: 1px;
-  border-style: solid;
-  background-color: #DEDEDE;
-  right: 0;
-  left: 0;
+.agenda__list {
   margin: auto;
-  margin-bottom: 8px;
-  border: none;
 }
 
-.agenda__article {
-  position: relative;
-  width: 349px;
-  height: 61px;
+.agenda__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px;
+  border-style: solid;
+  border-color: #DEDEDE;
   margin: auto;
-  margin-bottom: 8px;
+  margin: 8px 16px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 960px) {
+  .agenda__item {
+    position: relative;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    height: 93px;
+    margin: auto 106px;
+  }
 }
 
 .agenda__numbering {
-  position: absolute;
   font-size: 18px;
   color: #003F70;
   left: 0;
-  margin: 17px 0;
+  margin-right: 16px;
+}
+
+@media screen and (min-width: 960px) {
+  .agenda__numbering {
+    font-size: 26px;
+    padding-left: 48px;
+  }
 }
 
 .agenda__title {
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 27px;
-  font-size: 14px;
   width: 166px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,23 +342,56 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 16px;
+}
+
+@media screen and (min-width: 960px) {
+  .agenda__title {
+    width: auto;
+    padding-left: 64px;
+  }
 }
 
 .agenda__thumbnail {
-  position: absolute;
   bottom: 0;
   right: 0;
   width: 140px;
   height: 61px;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 960px) {
+  .agenda__thumbnail {
+    position: absolute;
+    width: 190px;
+    height: 77px;
+    margin-bottom: 8px;
+    right: 24px;
+  }
 }
 
 .AllMagazines {
-  height: 999px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -32px;
   background-color: #FFFFFF;
 }
 
+@media screen and (min-width: 560px) {
+  .AllMagazines {
+    top: -77px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .AllMagazines {
+    top: -134px;
+  }
+}
+
 .AllMagazines__AllBlocks {
-  height: 920px;
   margin-top: 48px;
 }
 
@@ -215,6 +405,14 @@ p {
   margin: 0 12px 21px;
 }
 
+@media screen and (min-width: 960px) {
+  .AllMagazines__block {
+    width: 187px;
+    height: 371px;
+    margin: 0 24px 56px;
+  }
+}
+
 .AllMagazines__thumbnail {
   position: absolute;
   top: 0;
@@ -225,23 +423,38 @@ p {
           filter: drop-shadow(0px 0px 6px #BFBFBF);
 }
 
+@media screen and (min-width: 960px) {
+  .AllMagazines__thumbnail {
+    width: 187px;
+    height: 279px;
+  }
+}
+
 .AllMagazines__numbering {
   position: absolute;
   top: 153px;
-  right: 0;
-  font-size: 10px;
-  width: 98px;
+  left: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .AllMagazines__numbering {
+    top: 291px;
+  }
 }
 
 .AllMagazines__title {
   position: absolute;
   top: 170px;
-  right: 0;
-  width: 98px;
-  height: 36px;
+  left: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 960px) {
+  .AllMagazines__title {
+    top: 311px;
+  }
 }
 
 .footer {
@@ -252,18 +465,45 @@ p {
   display: flex;
 }
 
-.footer__element01 {
+.footer__LogoWrapper {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 64px;
+  margin-right: 56px;
+}
+
+@media screen and (min-width: 960px) {
+  .footer__LogoWrapper {
+    display: inline-table;
+  }
+}
+
+.footer__logo {
+  display: none;
+  height: 49px;
+}
+
+@media screen and (min-width: 960px) {
+  .footer__logo {
+    display: initial;
+  }
+}
+
+.footer__link {
   margin: 28px 0px 0px 16px;
 }
 
-.footer__element02 {
-  margin: -43px 0px 71px 0px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.footer__element03 {
-  margin: 19px 0px 0px 80px;
+@media screen and (min-width: 960px) {
+  .footer__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: initial;
+  }
 }
 
 .footer__text {
@@ -274,11 +514,31 @@ p {
   margin-bottom: 12px;
 }
 
-.footer__FollowUs {
-  font-size: 10px;
+@media screen and (min-width: 960px) {
+  .footer__text {
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: initial;
+    margin-right: 12px;
+  }
+}
+
+.footer__border {
+  display: none;
+  font-family: "Noto Sans CJK JP";
   font-weight: normal;
+  font-size: 12px;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+@media screen and (min-width: 960px) {
+  .footer__border {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 12px;
+  }
 }
 
 .footer__CopyRight {
@@ -288,10 +548,62 @@ p {
   margin: 25px 0px 32px 0px;
 }
 
+@media screen and (min-width: 960px) {
+  .footer__CopyRight {
+    font-size: 9px;
+  }
+}
+
+.footer__SocialText {
+  margin: -43px 0px 71px 0px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media screen and (min-width: 960px) {
+  .footer__SocialText {
+    -webkit-transform: none;
+            transform: none;
+    margin: initial;
+  }
+}
+
+.footer__FollowUs {
+  font-size: 10px;
+  font-weight: normal;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 960px) {
+  .footer__FollowUs {
+    font-size: 9px;
+  }
+}
+
+.footer__SocialIcon {
+  margin: 19px 0 0 80px;
+}
+
+@media screen and (min-width: 960px) {
+  .footer__SocialIcon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: initial;
+  }
+}
+
 .footer__icon {
   color: #FFFFFF;
   text-decoration: none;
   margin: 8px 0;
   display: block;
+}
+
+@media screen and (min-width: 960px) {
+  .footer__icon {
+    margin: 0 0 0 8px;
+  }
 }
 /*# sourceMappingURL=magazine_sp.css.map */

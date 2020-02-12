@@ -1,4 +1,13 @@
 @charset "UTF-8";
+$breakpoints: (
+  'tb': 'screen and (min-width: 560px)',
+  'pc': 'screen and (min-width: 960px)',
+) !default;
+@mixin mq($breakpoint: tb) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
 
 //Premise
 $main: #6B8EF0;
@@ -22,114 +31,220 @@ body {
 
 //Text
 h1 {
-  font-size: 20px;
+  font-size: 18px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 32px;
+  }
 }
 h2 {
-  font-size: 18px;
+  font-size: 14px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 24px;
+  }
 }
 h3 {
-  font-size: 14px;
+  font-size: 12px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 20px;
+  }
 }
 h4 {
-  font-size: 12px;
-}
-h5 {
   font-size: 10px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 16px;
+  }
 }
 p {
   font-size: 14px;
   font-weight: normal;
   color: $gray;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 18px;
+  }
 }
 
 //Molecules
 .btn {
   display: block;
-  width: 327px;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   color: $white;
   background-color: $black;
-  margin: 24px auto auto;
+  margin: 24px 8px 40px;
   padding: 14px 0;
   left: 0;
   right: 0;
   text-align: center;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 18px;
+    width: 382px;
+    margin: 72px auto 136px;
+  }
 }
-.btn--slack {
-}
-.btn--GoogleCalender {
+.btn--icon {
 }
 
 //header
-.header{
-  /*position: fixed;*/
-  &__header{
+header{
   position: relative;
   height: 46px;
   background-color: $white;
+  @include mq() {
+    width: 50%;
+    margin-left: 50%;
   }
+  @include mq(pc) {
+    height: 103px;
+  }
+  .header{
   &__logo {
     position: absolute;
     width: 43.25px;
     margin: 11px auto;
     right: 0;
     left: 0;
+    @include mq() {
+    }
+    @include mq(pc) {
+      width: 96px;
+      margin-top: 21px;
+    }
   }
   &__menu{
     position: absolute;
     right: 17px;
     margin: 18px 0;
   }
+  }
 }
 
 //magazine
 .magazine{
+  overflow-y: hidden;
   position: relative;
-  height: 738px;
   background-color: $white;
   margin-bottom: 32px;
-  &__top{
+  @include mq() {
+    display: flex;
+    height: auto;
+    top: -46px;
+    z-index: -1000;
+  }
+  @include mq(pc) {
+    top: -103px;
+  }
+  &__headline{
   height:  381px;
   overflow: hidden;
+    @include mq() {
+      display: block;
+      width: 50%;
+      height: auto
+      ;
+    }
+    @include mq(pc) {
+    }
   }
   &__BackGround{
     width: 100%;
+    height: 100%;
   }
   &__thumbnail{
     position: absolute;
     right: 0;
     left: 0;
     margin: 23px auto;
+      @include mq() {
+        top: 0;
+        left: 14%;
+        right: unset;
+      }
+      @include mq(pc) {
+      }
+  }
+  &__main{
+    margin: auto;
+    padding: 0 16px;
+    overflow-y: hidden;
+    @include mq() {
+      margin: auto;
+      padding: 0 24px;
+      width: 50%;
+      margin-top: 46px;
+    }
+    @include mq(pc) {
+      margin-top: 136px;
+      padding: 0 48px;
+    }
   }
   &__sentence{
     margin: auto;
     text-align: justify;
-    width: 343px;
   }
-  &__featured{
+  &__numbering{
     margin-top: 16px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      margin-bottom: 20px;
+    }
   }
   &__title{
+    @include mq() {
+    }
+    @include mq(pc) {
+      margin-bottom: 32px;
+    }
   }
   &__text{
     font-weight: lighter;
     margin-top: 16px;
-    line-height: 21px;
+    line-height: 24px;
+    text-align: justify;
+    @include mq() {
+    }
+    @include mq(pc) {
+      line-height: 40px;
+    }
   }
 }
 
 //agenda
 .agenda{
   position: relative;
+  top: -33px;
   height: 368px;
   background-color: $white;
   margin-bottom: 32px;
-  &__agenda{
+  @include mq() {
+  }
+  @include mq(pc) {
+    height: initial;
+    top: -135px;
+  }
+  &__headline{
     position: relative;
-    height: 26px;
+    height: 34px;
     margin-bottom: 12px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      height: 50px;
+      margin: 48px 0 12px 0;
+    }
   }
   &__text{
     position: absolute;
@@ -141,57 +256,89 @@ p {
     top: 16px;
     right: 24px;
   }
-  &__hr{
-    width: 357px;
-    height: 1px;
-    border-style: solid;
-    background-color: #DEDEDE;
-    right: 0;
-    left: 0;
+  &__list{
     margin: auto;
-    margin-bottom: 8px;
-    border: none;
   }
-  &__article{
-    position: relative;
-    width: 349px;
-    height: 61px;
+  &__item{
+    display: flex;
+    border-top: 1px;
+    border-style: solid;
+    border-color: #DEDEDE;
     margin: auto;
-    margin-bottom: 8px;
+    margin: 8px 16px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    align-items: center;
+    justify-content: center;
+    @include mq() {
+    }
+    @include mq(pc) {
+      position: relative;
+      justify-content: initial;
+      height: 93px;
+      margin: auto 106px;
+    }
   }
   &__numbering{
-    position: absolute;
     font-size: 18px;
     color: #003F70;
     left: 0;
-    margin: 17px 0;
+    margin-right: 16px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 26px;
+      padding-left: 48px;
+    }
   }
   &__title{
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 27px;
-    font-size: 14px;
     width: 166px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 16px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      width: auto;
+      padding-left: 64px;
+    }
   }
   &__thumbnail{
-    position: absolute;
     bottom: 0;
     right: 0;
     width: 140px;
     height: 61px;
+    margin-top: 8px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      position: absolute;
+      width: 190px;
+      height: 77px;
+      margin-bottom: 8px;
+      right: 24px;
+    }
   }
 }
 
 //AllMagazines
 .AllMagazines{
-  height: 999px;
+  display: flex;
+  position: relative;
+  top: -32px;
   background-color: $white;
+  @include mq() {
+    top: -77px;
+  }
+  @include mq(pc) {
+    top: -134px
+  }
   &__AllBlocks{
-    height: 920px;
     margin-top: 48px;
   }
   &__block{
@@ -200,6 +347,13 @@ p {
     width: 98px;
     height: 206px;
     margin: 0 12px 21px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      width: 187px;
+      height: 371px;
+      margin: 0 24px 56px;
+    }
   }
   &__thumbnail{
     position: absolute;
@@ -208,21 +362,33 @@ p {
     width: 98px;
     height: 147px;
     filter: drop-shadow(0px 0px 6px #BFBFBF);
+    @include mq() {
+    }
+    @include mq(pc) {
+      width: 187px;
+      height: 279px;
+    }
   }
   &__numbering{
     position: absolute;
     top: 153px;
-    right: 0;
-    font-size: 10px;
-    width: 98px;
+    left: 0;
+    @include mq() {
+    }
+    @include mq(pc) {
+      top: 291px;
+    }
   }
   &__title{
     position: absolute;
     top: 170px;
-    right: 0;
-    width: 98px;
-    height: 36px;
+    left: 0;
     justify-content: center;
+    @include mq() {
+    }
+    @include mq(pc) {
+      top: 311px;
+    }
   }
 }
 
@@ -231,17 +397,34 @@ p {
   background-color: #272727;
   font-weight: 400;
   display: flex;
-  &__element{
+  &__LogoWrapper{
+    align-self: center;
+    margin-left: 64px;
+    margin-right: 56px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: inline-table;
+    }
   }
-  &__element01 {
+  &__logo{
+    display: none;
+    height: 49px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: initial;
+    }
+  }
+  &__link {
     margin: 28px 0px 0px 16px;
-  }
-  &__element02 {
-    margin: -43px 0px 71px 0px;
-    transform: rotate(90deg);
-  }
-  &__element03 {
-    margin: 19px 0px 0px 80px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+      align-items: center;
+      margin: initial;
+    }
   }
   &__text {
     color: $white;
@@ -249,23 +432,79 @@ p {
     text-decoration: none;
     display: block;
     margin-bottom: 12px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 12px;
+      font-weight: 100;
+      margin-bottom: initial;
+      margin-right: 12px;
+    }
   }
-  &__FollowUs {
-    font-size: 10px;
+  &__border{
+    display: none;
+    font-family: "Noto Sans CJK JP";
     font-weight: normal;
+    font-size: 12px;
     color: $white;
     text-decoration: none;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+      margin-right: 12px;
+    }
   }
   &__CopyRight {
     color: #AEAEAE;
     font-size: 8px;
     font-weight: normal;
     margin: 25px 0px 32px 0px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 9px;
+    }
+  }
+  &__SocialText {
+    margin: -43px 0px 71px 0px;
+    transform: rotate(90deg);
+    @include mq() {
+    }
+    @include mq(pc) {
+      transform: none;
+      margin: initial;
+    }
+  }
+  &__FollowUs {
+    font-size: 10px;
+    font-weight: normal;
+    color: $white;
+    text-decoration: none;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 9px;
+    }
+  }
+  &__SocialIcon {
+    margin: 19px 0 0 80px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+      margin: initial;
+    }
   }
   &__icon {
     color: $white;
     text-decoration: none;
     margin: 8px 0;
     display: block;
+    @include mq() {
+    }
+    @include mq(pc) {
+      margin: 0 0 0 8px;
+    }
   }
 }
