@@ -1,4 +1,4 @@
-<!DOCTTYPE html>
+<!DOCTYPE html>
 <div lang="ja">
 <head>
 	<meta charset='UTF-8'>
@@ -9,7 +9,9 @@
 	<link rel="stylesheet" href="style/ress.css">
 	<link rel="stylesheet" href="style/top_sp.css">
 	<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
-	rel="stylesheet">
+  rel="stylesheet">
+  <link rel="stylesheet" href="style/top_sp.css"
+  media="screen and (max-width:560px) and (max-width:960px)">
 	<script>
 		(function(d) {
 			var config = {
@@ -31,9 +33,7 @@
 </head>
 <body>
 <section class="FirstView">
-	<div>
-		<img src="./images/logoline.png" alt="" class="FirstView__LogoLine">
-	</div>
+	<hr class="FirstView__LogoLine">
 	<div class="FirstView__video">
 		<video
 			autoplay loop muted playsinline
@@ -54,116 +54,173 @@
 <header>
 	<div class="header">
     <img src="./images/logo.svg" alt="DIO" class="header__logo">
-    //↓cssで作る
-    <img src="./images/menu.svg" alt="" class="header__menu">
+    <div class="header__menu">
+      <div class="header__MenuIcon"></div>
 	</div>
 </header>
-<section>
-	<ul class="carousel">
+<section class="carousel">
+	<ul class="carousel__wrapper">
 		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
 			alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.9</h5>
-			<h3 class="carousel__title">上司と部下2.0</h3>
+			<h4 class="carousel__numbering">No.9</h4>
+      <h3 class="carousel__title">上司と部下2.0</h3>
+      </a>
 		</li>
 		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
 			alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.8</h5>
-			<h3 class="carousel__title">ゆとりな働き方</p>
+			<h4 class="carousel__numbering">No.8</h4>
+      <h3 class="carousel__title">ゆとりな働き方</p>
+      </a>
+    </li>
+		<li class="carousel__magazine">
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
+            alt="マガジン" width="129" height="192">
+			<h4 class="carousel__numbering">No.07</h4>
+      <h3 class="carousel__title">経営とアート</h3>
+      </a>
+    </li>
+		<li class="carousel__magazine">
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
+            alt="マガジン" width="129" height="192">
+			<h4 class="carousel__numbering">No.06</h4>
+      <h3 class="carousel__title">ニューエリート</h3>
+      </a>
+    </li>
+		<li class="carousel__magazine">
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
+            alt="マガジン" width="129" height="192">
+			<h4 class="carousel__numbering">No.05</h4>
+      <h3 class="carousel__title">働き方改革大全</h3>
+      </a>
+    </li>
+		<li class="carousel__magazine">
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
+            alt="マガジン" width="129" height="192">
+			<h4 class="carousel__numbering">No.04</h4>
+      <h3 class="carousel__title">起業家マインド 02</h3>
+      </a>
 		</li>
 		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.07</p>
-			<h3 class="carousel__title">経営とアート</h3>
+			<h4 class="carousel__numbering">No.03</h4>
+      <h3 class="carousel__title">起業家マインド 01</h3>
+      </a>
 		</li>
 		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.06</p>
-			<h3 class="carousel__title">ニューエリート</p>
+			<h4 class="carousel__numbering">No.02</h4>
+      <h3 class="carousel__title">本音が言える関係作り</h3>
+      </a>
 		</li>
 		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
+      <a href="magazine_sp.html">
+      <img src="./images/magazine08.svg" class="carousel__thumbnail"
             alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.05</p>
-			<h3 class="carousel__title">働き方改革大全</p>
-		</li>
-		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
-            alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.04</p>
-			<h3 class="carousel__title">起業家マインド 02</h3>
-		</li>
-		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
-            alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.03</p>
-			<h3 class="carousel__title">起業家マインド 01</h3>
-		</li>
-		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
-            alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.02</p>
-			<h3 class="carousel__title">本音が言える関係作り</h3>
-		</li>
-		<li class="carousel__magazine">
-			<img src="./images/magazine08.svg" class="carousel__thumbnail"
-            alt="マガジン" width="129" height="192">
-			<h5 class="carousel__numbering">No.01</p>
-			<h3 class="carousel__title">エンゲージメントが高い企業</p>
+			<h4 class="carousel__numbering">No.01</h4>
+      <h3 class="carousel__title">エンゲージメントが高い企業</h3>
+      </a>
 		</li>
 	</ul>
 </section>
 <section class="recommend">
-    <div>
+  <div class="recommend__wrapper">
 		<img src="./images/recommend.png" alt="オススメの記事" width: 580px;
-		class="recommend__thumbnail">
-	</div>
-	<div>
-    <h3 class="recommend__featured">No.10 チームを成長させる「1on1」</h3>
-    <h2 class="recommend__title">メンバーの成長を促進させる1on1のやり方</h2>
-    <p class="recommend__text">
-      DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな...
-    </p>
+    class="recommend__thumbnail">
+    <div class="recommend__sentence">
+      <h2 class="recommend__numbering">No.10 チームを成長させる「1on1」</h3>
+      <h1 class="recommend__title">メンバーの成長を促進させる1on1のやり方</h2>
+      <p class="recommend__text">
+        DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな...
+      </p>
+    </div>
   </div>
 	<img src="images/recommend__icon.svg" class="recommend__icon">
 </section>
-<section>
-	<div>
+<section class="article">
+	<div class="article__wrapper">
 		<div>
 			<img src="./images/article.png" class="article__thumbnail"
 			alt="記事のサムネイル" width="360" height="152">
 		</div>
-		<div>
-			<h3 class="article__featured">No.10 チームを成長させる「1on1」</h3>
+		<div class="article__sentence">
+			<h3 class="article__numbering">No.10 チームを成長させる「1on1」</h3>
 			<h2 class="article__title">メンバーの成長を促進させる1on1のやり方</h2>
 			<p class="article__text">
 				DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな彼が2019...
 			</p>
 		</div>
 	</div>
-	<div>
+	<div class="article__wrapper">
 		<div>
 			<img src="./images/article.png" class="article__thumbnail"
 			alt="記事のサムネイル" width="360" height="152">
 		</div>
-		<div>
-			<h3 class="article__featured">No.10 チームを成長させる「1on1」</h3>
+		<div class="article__sentence">
+			<h3 class="article__numbering">No.10 チームを成長させる「1on1」</h3>
 			<h2 class="article__title">メンバーの成長を促進させる1on1のやり方</h2>
 			<p class="article__text">
 				DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな彼が2019...
 			</p>
 		</div>
 	</div>
-	<div>
+	<div class="article__wrapper">
 		<div>
 			<img src="./images/article.png" class="article__thumbnail"
 			alt="記事のサムネイル" width="360" height="152">
 		</div>
+		<div class="article__sentence">
+			<h3 class="article__numbering">No.10 チームを成長させる「1on1」</h3>
+			<h2 class="article__title">メンバーの成長を促進させる1on1のやり方</h2>
+			<p class="article__text">
+				DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな彼が2019...
+			</p>
+		</div>
+  </div>
+	<div class="article__wrapper">
 		<div>
-			<h3 class="article__featured">No.10 チームを成長させる「1on1」</h3>
+			<img src="./images/article.png" class="article__thumbnail"
+			alt="記事のサムネイル" width="360" height="152">
+		</div>
+		<div class="article__sentence">
+			<h3 class="article__numbering">No.10 チームを成長させる「1on1」</h3>
+			<h2 class="article__title">メンバーの成長を促進させる1on1のやり方</h2>
+			<p class="article__text">
+				DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな彼が2019...
+			</p>
+		</div>
+	</div>
+	<div class="article__wrapper">
+		<div>
+			<img src="./images/article.png" class="article__thumbnail"
+			alt="記事のサムネイル" width="360" height="152">
+		</div>
+		<div class="article__sentence">
+			<h3 class="article__numbering">No.10 チームを成長させる「1on1」</h3>
+			<h2 class="article__title">メンバーの成長を促進させる1on1のやり方</h2>
+			<p class="article__text">
+				DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな彼が2019...
+			</p>
+		</div>
+	</div>
+	<div class="article__wrapper">
+		<div>
+			<img src="./images/article.png" class="article__thumbnail"
+			alt="記事のサムネイル" width="360" height="152">
+		</div>
+		<div class="article__sentence">
+			<h3 class="article__numbering">No.10 チームを成長させる「1on1」</h3>
 			<h2 class="article__title">メンバーの成長を促進させる1on1のやり方</h2>
 			<p class="article__text">
 				DeNAでのデザインチーム改革や「bosyu」を始めとすベースキベースキャンプでのプロダクト開発支援等デザインをベースに様々な領域で活躍を続けてきたそんな彼が2019...

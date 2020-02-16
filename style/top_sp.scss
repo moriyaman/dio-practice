@@ -1,4 +1,37 @@
 @charset "UTF-8";
+$breakpoints: (
+  'tb': 'screen and (min-width: 560px)',
+  'pc': 'screen and (min-width: 960px)',
+) !default;
+@mixin mq($breakpoint: tb) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin text-truncate($font-size, $line-height, $line, $bg) {
+  position: relative;
+  max-height: $font-size * $line-height * $line + px;
+  font-size: $font-size + px;
+  line-height: $line-height;
+  word-break: break-all;
+  overflow: hidden;
+  &::before,
+  &::after {
+    position: absolute;
+    background: $bg;
+  }
+  &::before {
+    content: '...';
+    top: $font-size * $line-height * ($line - 1) + px;
+    right: 0;
+    width: 1em;
+  }
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+  }
+}
 
 //Premise
 $main: #6B8EF0;
@@ -22,24 +55,45 @@ body {
 
 //Text
 h1 {
-  font-size: 20px;
+  font-size: 18px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 32px;
+  }
 }
 h2 {
-  font-size: 18px;
+  font-size: 14px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 24px;
+  }
 }
 h3 {
-  font-size: 14px;
+  font-size: 12px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 20px;
+  }
 }
 h4 {
-  font-size: 12px;
-}
-h5 {
   font-size: 10px;
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 16px;
+  }
 }
 p {
-  font-size: 14px;
   font-weight: normal;
-  color: $gray;
+  @include text-truncate(14, 1.8, 3, $gray);
+  @include mq() {
+  }
+  @include mq(pc) {
+    font-size: 18px;
+  }
 }
 
 //Molecules
@@ -65,10 +119,11 @@ p {
   position: relative;
   text-align: center;
   &__LogoLine {
-    display: block;
-    height: 48px;
-    width: auto;
-    overflow: hidden;
+    background-image: url(../images/logoline.png);
+    background-repeat: repeat-x;
+    border: 0;
+    height: 70px;
+    width: 100%;
   }
   &__items{
     height: 65%;
@@ -139,17 +194,37 @@ p {
   &__menu{
     position: absolute;
     right: 17px;
-    margin: 18px 0;
+    margin: 2px 0;
+  }
+  &__MenuIcon{
+    position: relative;
+    width: 25px;
+    height: 3px;
+    color: #000;
+    background: currentColor;
+    margin-top: 25px;
+    &:before{
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 100%;
+      height: 100%;
+      background: currentColor;
+    }
   }
 }
 
 //Carousel
 .carousel {
   background-color: $OffWhite;
+  &__wrapper{
   margin: 0;
   position: relative;
   width: fit-content;
   display: flex;
+  text-decoration: none;
+  color: $black;
+  }
   &__magazine {
     margin: 24px 20px 0 20px;
     width: 128px;
@@ -164,12 +239,29 @@ p {
 
 //Recommend
 .recommend {
-  margin: 0 16px 0;
+  margin: 0 auto;
+  padding: 0 16px;
+  @include mq() {
+    max-width: 640px;
+  }
+  @include mq(pc) {
+    max-width: initial;
+  }
+  &__wrapper{
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+    }
+  }
   &__thumbnail {
     width: 100%;
     margin-top: 40px;
   }
-  &__featured {
+  &__sentence{
+    margin: auto;
+  }
+  &__numbering {
     background-color: $DarkGray;
     padding: 6px 8px;
     color: $white;
@@ -180,35 +272,60 @@ p {
   }
   &__title{
     margin-top: 8px;
+    text-align: justify;
   }
   &__text {
     margin-top: 8px;
+    text-align: justify;
   }
   &__icon {
     margin: 16px 44% 8px;
   }
 }
 
-//Articles
+//AllArticles
 .article {
-  &__thumbnail {
-    margin: 56px 16px 0;
-    width: auto;
+  margin: 0 auto;
+  padding: 0 16px;
+  @include mq() {
+    max-width: 640px;
   }
-  &__featured {
+  @include mq(pc) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: initial;
+  }
+  &__wrapper {
+    @include mq() {
+    }
+    @include mq(pc) {
+      margin: 0 20px;
+      width: 30%;
+    }
+  }
+  &__thumbnail {
+    margin-top: 56px;
+    width: 100%;
+    height: auto;
+  }
+  &__sentence{
+  }
+  &__numbering {
     background-color: $DarkGray;
     padding: 6px 8px;
     color: $white;
     font-weight: 500;
     border-radius: 22px;
     width: fit-content;
-    margin: 12px 16px 0;
+    margin-top: 12px;
   }
   &__title {
-    margin: 8px 16px 0;
+    margin-top: 8px;
+    text-align: justify;
   }
   &__text {
-    margin: 8px 16px 0;
+    margin-top: 8px;
+    text-align: justify;
   }
 }
 
