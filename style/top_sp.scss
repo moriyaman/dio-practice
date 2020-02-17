@@ -8,30 +8,6 @@ $breakpoints: (
     @content;
   }
 }
-@mixin text-truncate($font-size, $line-height, $line, $bg) {
-  position: relative;
-  max-height: $font-size * $line-height * $line + px;
-  font-size: $font-size + px;
-  line-height: $line-height;
-  word-break: break-all;
-  overflow: hidden;
-  &::before,
-  &::after {
-    position: absolute;
-    background: $bg;
-  }
-  &::before {
-    content: '...';
-    top: $font-size * $line-height * ($line - 1) + px;
-    right: 0;
-    width: 1em;
-  }
-  &::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-  }
-}
 
 //Premise
 $main: #6B8EF0;
@@ -41,6 +17,12 @@ $OffWhite: #F3F3F7;
 $black: #141414;
 $gray: #767676;
 $DarkGray: #393E42;
+
+// Variables
+$container-bg: #FFFFFF;
+$font-size-base: 14px;
+$line-height-computed: 1.9;
+$lines-to-show: 3;
 
 * {
   overflow-x: hidden;
@@ -88,7 +70,7 @@ h4 {
 }
 p {
   font-weight: normal;
-  @include text-truncate(14, 1.8, 3, $gray);
+  color: $gray;
   @include mq() {
   }
   @include mq(pc) {
@@ -239,27 +221,38 @@ p {
 
 //Recommend
 .recommend {
-  margin: 0 auto;
-  padding: 0 16px;
-  @include mq() {
-    max-width: 640px;
-  }
-  @include mq(pc) {
-    max-width: initial;
-  }
   &__wrapper{
+    margin: 0 auto;
+    padding: 0 16px;
     @include mq() {
+      max-width: 660px;
     }
-    @include mq(pc) {
+    @media screen and (min-width:1068px) {
+      max-width: initial;
+      padding: initial;
+      margin: auto;
       display: flex;
+      width: 1036px;
     }
   }
   &__thumbnail {
     width: 100%;
     margin-top: 40px;
+    @include mq() {
+    }
+    @media screen and (min-width:1068px) {
+      margin-top: 104px;
+      width: 580px;
+    }
   }
   &__sentence{
-    margin: auto;
+    margin-left: 5px;
+    @include mq() {
+    }
+    @media screen and (min-width:1068px) {
+      margin-top: 104px;
+      width: 432px;
+    }
   }
   &__numbering {
     background-color: $DarkGray;
@@ -268,7 +261,12 @@ p {
     font-weight: 500;
     border-radius: 22px;
     width: fit-content;
-    margin-top: 12px;
+    margin-top: 7px;
+    @include mq() {
+    }
+    @media screen and (min-width:1068px) {
+      font-size: 19px;
+    }
   }
   &__title{
     margin-top: 8px;
@@ -279,7 +277,13 @@ p {
     text-align: justify;
   }
   &__icon {
-    margin: 16px 44% 8px;
+    display: block;
+    margin: 16px auto 8px;
+    @include mq() {
+    }
+    @media screen and (min-width:1068px) {
+      margin-bottom: 80px;
+    }
   }
 }
 
@@ -326,6 +330,25 @@ p {
   &__text {
     margin-top: 8px;
     text-align: justify;
+    font-size: $font-size-base;
+    height: $font-size-base * $line-height-computed * $lines-to-show;
+    line-height: $line-height-computed;
+    position: relative;
+    &:before,
+    &:after {
+      background: #FFFFFF;
+      position: absolute;
+    }
+    &:before {
+      content: "...";
+      top: $font-size-base * $line-height-computed * ($lines-to-show - 1);
+      right: 0;
+    }
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -398,6 +421,9 @@ p {
   &__link--select{
     color: $white;
     display: flex;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 11px;
+    border-radius: 2px;
   }
   &__border{
     margin-left: 18px;

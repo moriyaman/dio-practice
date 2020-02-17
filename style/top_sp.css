@@ -53,30 +53,7 @@ h4 {
 
 p {
   font-weight: normal;
-  position: relative;
-  max-height: 75.6px;
-  font-size: 14px;
-  line-height: 1.8;
-  word-break: break-all;
-  overflow: hidden;
-}
-
-p::before, p::after {
-  position: absolute;
-  background: #767676;
-}
-
-p::before {
-  content: '...';
-  top: 50.4px;
-  right: 0;
-  width: 1em;
-}
-
-p::after {
-  content: '';
-  width: 100%;
-  height: 100%;
+  color: #767676;
 }
 
 @media screen and (min-width: 960px) {
@@ -231,28 +208,26 @@ p::after {
   width: 128px;
 }
 
-.recommend {
+.recommend__wrapper {
   margin: 0 auto;
   padding: 0 16px;
 }
 
 @media screen and (min-width: 560px) {
-  .recommend {
-    max-width: 640px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .recommend {
-    max-width: initial;
-  }
-}
-
-@media screen and (min-width: 960px) {
   .recommend__wrapper {
+    max-width: 660px;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .recommend__wrapper {
+    max-width: initial;
+    padding: initial;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 1036px;
   }
 }
 
@@ -261,8 +236,22 @@ p::after {
   margin-top: 40px;
 }
 
+@media screen and (min-width: 1068px) {
+  .recommend__thumbnail {
+    margin-top: 104px;
+    width: 580px;
+  }
+}
+
 .recommend__sentence {
-  margin: auto;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 1068px) {
+  .recommend__sentence {
+    margin-top: 104px;
+    width: 432px;
+  }
 }
 
 .recommend__numbering {
@@ -274,7 +263,13 @@ p::after {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: 12px;
+  margin-top: 7px;
+}
+
+@media screen and (min-width: 1068px) {
+  .recommend__numbering {
+    font-size: 19px;
+  }
 }
 
 .recommend__title {
@@ -288,7 +283,14 @@ p::after {
 }
 
 .recommend__icon {
-  margin: 16px 44% 8px;
+  display: block;
+  margin: 16px auto 8px;
+}
+
+@media screen and (min-width: 1068px) {
+  .recommend__icon {
+    margin-bottom: 80px;
+  }
 }
 
 .article {
@@ -346,6 +348,27 @@ p::after {
 .article__text {
   margin-top: 8px;
   text-align: justify;
+  font-size: 14px;
+  height: 79.8px;
+  line-height: 1.9;
+  position: relative;
+}
+
+.article__text:before, .article__text:after {
+  background: #FFFFFF;
+  position: absolute;
+}
+
+.article__text:before {
+  content: "...";
+  top: 53.2px;
+  right: 0;
+}
+
+.article__text:after {
+  content: "";
+  height: 100%;
+  width: 100%;
 }
 
 .footer {
@@ -436,6 +459,9 @@ p::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 11px;
+  border-radius: 2px;
 }
 
 .nav__border {
