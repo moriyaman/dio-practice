@@ -390,19 +390,6 @@ ol, ul {
   background-color: #272727;
   font-weight: 400;
   margin-top: 64px;
-  margin-bottom: 44px;
-}
-
-@media screen and (min-width: 560px) {
-  .footer {
-    margin-bottom: 56px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .footer {
-    margin-bottom: 72px;
-  }
 }
 
 .footer__container {
@@ -411,6 +398,13 @@ ol, ul {
   padding-bottom: 32px;
   margin-left: 16px;
   margin-right: 16px;
+  margin-bottom: 44px;
+}
+
+@media screen and (min-width: 560px) {
+  .footer__container {
+    margin-bottom: 56px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -425,6 +419,7 @@ ol, ul {
     margin-right: 32px;
     padding-top: 48px;
     padding-bottom: 40px;
+    margin-bottom: 72px;
   }
 }
 

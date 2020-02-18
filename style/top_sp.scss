@@ -369,20 +369,15 @@ ol, ul {
   background-color: #272727;
   font-weight: 400;
   margin-top: 64px;
-  margin-bottom: 44px;
-  @include mq() {
-    margin-bottom: 56px;
-  }
-  @include mq(pc) {
-    margin-bottom: 72px;
-  }
   &__container{
     position: relative;
     padding-top: 28px;
     padding-bottom: 32px;
     margin-left: 16px;
     margin-right: 16px;
+    margin-bottom: 44px;
     @include mq() {
+      margin-bottom: 56px;
     }
     @include mq(pc) {
       display: flex;
@@ -391,6 +386,7 @@ ol, ul {
       margin-right: 32px;
       padding-top: 48px;
       padding-bottom: 40px;
+      margin-bottom: 72px;
     }
   }
   &__LogoWrapper{
