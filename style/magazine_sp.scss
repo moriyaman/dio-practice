@@ -396,115 +396,136 @@ header{
 .footer {
   background-color: #272727;
   font-weight: 400;
-  display: flex;
-  &__LogoWrapper{
-    align-self: center;
-    margin-left: 64px;
-    margin-right: 56px;
-    @include mq() {
-    }
-    @include mq(pc) {
-      display: inline-table;
-    }
-  }
-  &__logo{
-    display: none;
-    height: 49px;
-    @include mq() {
-    }
-    @include mq(pc) {
-      display: initial;
-    }
-  }
-  &__link {
-    margin: 28px 0px 0px 16px;
+  margin-top: 64px;
+  margin-bottom: 44px;
+  &__container{
+    position: relative;
+    padding-top: 28px;
+    padding-bottom: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
     @include mq() {
     }
     @include mq(pc) {
       display: flex;
       align-items: center;
-      margin: initial;
+      margin-left: 32px;
+      margin-right: 32px;
+      padding-top: 48px;
+      padding-bottom: 40px;
+    }
+  }
+  &__LogoWrapper{
+    display: none;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: block;
+    }
+  }
+  &__logo {
+    width: 85px;
+  }
+  &__nav {
+    box-shadow: 0px  -2px 6px 6px #F5F5F5;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+      flex: 1 1 auto;
+      margin: auto 0 auto 56px;
     }
   }
   &__text {
+    display: flex;
     color: $white;
     font-weight: 500;
-    text-decoration: none;
-    display: block;
     margin-bottom: 12px;
     @include mq() {
     }
     @include mq(pc) {
       font-size: 12px;
-      font-weight: 100;
       margin-bottom: initial;
-      margin-right: 12px;
     }
   }
   &__border{
     display: none;
-    font-family: "Noto Sans CJK JP";
-    font-weight: normal;
-    font-size: 12px;
-    color: $white;
-    text-decoration: none;
     @include mq() {
     }
     @include mq(pc) {
       display: flex;
-      margin-right: 12px;
+      font-size: 12px;
+      margin: 0 8px;
+    }
+  }
+  &__about{
+  }
+  &__social{
+    display: flex;
+    position: absolute;
+    top: 28px;
+    right: 0;
+    justify-content: flex-end;
+    align-items: flex-start;
+    @include mq() {
+    }
+    @include mq(pc) {
+      position: initial;
+      align-items: center;
+    }
+  }
+  &__SocialTitle {
+    font-size: 10px;
+    font-weight: normal;
+    color: $white;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin-right: 8px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 9px;
+      writing-mode: initial;
+      margin-right: initial;
+    }
+  }
+  &__SocialItems{
+    display: block;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+    }
+  }
+  &__SocialIcon {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 8px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      height: 20px;
+      width: 20px;
+      margin-left: 8px;
+      margin-bottom: initial;
+    }
+  }
+  &__icon {
+    @include mq() {
+    }
+    @include mq(pc) {
     }
   }
   &__CopyRight {
     color: #AEAEAE;
     font-size: 8px;
     font-weight: normal;
-    margin: 25px 0px 32px 0px;
+    margin-top: 12px;
     @include mq() {
     }
     @include mq(pc) {
       font-size: 9px;
-    }
-  }
-  &__SocialText {
-    margin: -43px 0px 71px 0px;
-    transform: rotate(90deg);
-    @include mq() {
-    }
-    @include mq(pc) {
-      transform: none;
-      margin: initial;
-    }
-  }
-  &__FollowUs {
-    font-size: 10px;
-    font-weight: normal;
-    color: $white;
-    text-decoration: none;
-    @include mq() {
-    }
-    @include mq(pc) {
-      font-size: 9px;
-    }
-  }
-  &__SocialIcon {
-    margin: 19px 0 0 80px;
-    @include mq() {
-    }
-    @include mq(pc) {
-      display: flex;
-      margin: initial;
-    }
-  }
-  &__icon {
-    color: $white;
-    text-decoration: none;
-    margin: 8px 0;
-    display: block;
-    @include mq() {
-    }
-    @include mq(pc) {
-      margin: 0 0 0 8px;
+      text-align: right;
     }
   }
 }

@@ -55,7 +55,8 @@
 	<div class="header">
     <img src="./images/logo.svg" alt="DIO" class="header__logo">
     <div class="header__menu">
-    <div class="header__MenuIcon"></div>
+      <span class="header__MenuLine header__LineTop"></span>
+      <span class="header__MenuLine header__LineBottom"></span>
 	</div>
 </header>
 <section class="carousel">
@@ -273,34 +274,40 @@
           </li>
         </ul>
       </div>
-      <div class="footer__CopyRight">
-        <p>©2020 DIO. All Rights Reserved.</p>
+      <div>
+        <p class="footer__CopyRight">©2020 DIO. All Rights Reserved.</p>
       </div>
     </div>
 </footer>
 <nav class="nav">
   <ul class="nav__contents">
       <li class="nav__list">
-        <a href="#" class="nav__link nav__link--select">ALL</a>
+        <div class="nav__LinkSelectWrapper">
+          <a href="#" class="nav__link nav__LinkSelect">ALL</a>
+          <a href="#" class="nav__LinkSub nav__LinkSelect">チームに必要なすべて</a>
+        </div>
       </li>
       <li>
         <p class="nav__border">|</p>
       </li>
       <li class="nav__list">
         <a href="#" class="nav__link">REVIEW</a>
+        <a href="#" class="nav__LinkSub">対話・振り返りのTips</a>
       </li>
       <li>
         <p class="nav__border">|</p>
       </li>
       <li class="nav__list">
         <a href="#" class="nav__link">ACTION</a>
+        <a href="#" class="nav__LinkSub">取り組み実地のTips</a>
       </li>
       <li>
         <p class="nav__border">|</p>
       </li>
       <li class="nav__list">
         <a href="#" class="nav__link">READY</a>
+        <a href="#" class="nav__LinkSub">実行以前に必要なTips</a>
       </li>
-    </ul>
+  </ul>
 </nav>
 </body>
