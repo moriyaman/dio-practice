@@ -77,6 +77,10 @@ p {
     font-size: 18px;
   }
 }
+a{
+  color: inherit;
+  text-decoration: none;
+}
 
 //Molecules
 .btn {
@@ -191,7 +195,7 @@ p {
       top: -8px;
       width: 100%;
       height: 100%;
-      background: currentColor;
+      background-color: $white;
     }
   }
 }
@@ -287,7 +291,7 @@ p {
   }
 }
 
-//AllArticles
+//article
 .article {
   margin: 0 auto;
   padding: 0 16px;
@@ -342,56 +346,146 @@ p {
     &:before {
       content: "...";
       top: $font-size-base * $line-height-computed * ($lines-to-show - 1);
-      right: 0;
+      right: 1.5px;
     }
     &:after {
       content: "";
       height: 100%;
       width: 100%;
     }
+    overflow-y: hidden;
   }
 }
 
 //footer
 .footer {
-  margin-top: 64px;
   background-color: #272727;
   font-weight: 400;
-  display: flex;
-  &__element01 {
-    margin: 28px 0px 32px 16px;
+  margin-bottom: 44px;
+  &__container{
+    position: relative;
+    padding-top: 28px;
+    padding-bottom: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+      align-items: center;
+      margin-left: 32px;
+      margin-right: 32px;
+      padding-top: 48px;
+      padding-bottom: 40px;
+    }
   }
-  &__element02 {
-    margin: -42px 0px 102px 0px;
-    transform: rotate(90deg);
+  &__LogoWrapper{
+    display: none;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: block;
+    }
   }
-  &__element03 {
-    margin: 19px 16px 54px 80px;
+  &__logo {
+    width: 85px;
+  }
+  &__nav {
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+      flex: 1 1 auto;
+      margin-left: 56px;
+    }
   }
   &__text {
+    display: flex;
     color: $white;
     font-weight: 500;
-    text-decoration: none;
-    display: block;
     margin-bottom: 12px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 12px;
+    }
   }
-  &__FollowUs {
+  &__border{
+    display: none;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+      font-size: 12px;
+      margin: 0 8px;
+    }
+  }
+  &__about{
+  }
+  &__social{
+    display: flex;
+    position: absolute;
+    top: 28px;
+    right: 0;
+    justify-content: flex-end;
+    align-items: flex-start;
+    @include mq() {
+    }
+    @include mq(pc) {
+      align-items: center;
+    }
+  }
+  &__SocialTitle {
     font-size: 10px;
     font-weight: normal;
     color: $white;
-    text-decoration: none;
+    margin-right: 8px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 9px;
+      writing-mode: initial;
+    }
+  }
+  &__SocialItems{
+    display: block;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+    }
+  }
+  &__SocialIcon {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 12px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  &__icon {
+    @include mq() {
+    }
+    @include mq(pc) {
+    }
   }
   &__CopyRight {
     color: #AEAEAE;
     font-size: 8px;
     font-weight: normal;
-    margin: 25px 0px 32px 0px;
-  }
-  &__icon {
-    color: $white;
-    text-decoration: none;
-    margin: 8px 0;
-    display: block;
+    margin-top: 24px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      margin-top: 12px;
+      font-size: 9px;
+      text-align: right;
+    }
   }
 }
 
@@ -399,24 +493,22 @@ p {
 .nav {
   bottom: 0;
   position: fixed;
-  width: -webkit-fill-available;
+  width: 100%;
   height: 44px;
-  z-index: 10000;
   background-color:rgba(255, 255, 255, 0.7);
   &__contents{
     align-items: center;
     display: flex;
-    margin-top: 10px;
   }
   &__list{
-    margin: auto;
+    margin: 0 auto;
   }
   &__link{
     font-family: "Staatliches", "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
     font-size: 18px;
     color: $black;
     text-decoration: none;
-    width: 52px;
+    width: 10vh;
   }
   &__link--select{
     color: $white;
@@ -424,18 +516,18 @@ p {
     background-color: rgba(51, 51, 51, 0.9);
     padding: 11px;
     border-radius: 2px;
+    justify-content: center;
   }
   &__border{
-    margin-left: 18px;
-  }
-  &__square{
-    position: absolute;
-    bottom: 0px;
-    left: 22px;
-    width: 72px;
-    height: 44px;
-    border-radius: 2px;
-    background-color: #333333;
-    opacity: 90%;
+    font-family: "Noto Sans CJK JP";
+    font-weight: bold;
+    font-size: 14px;
+    color: $black;
+    text-decoration: none;
+    @include mq() {
+    }
+    @include mq(pc) {
+      display: flex;
+    }
   }
 }
