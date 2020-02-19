@@ -16,6 +16,12 @@ h1 {
   font-size: 18px;
 }
 
+@media screen and (min-width: 560px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   h1 {
     font-size: 32px;
@@ -24,6 +30,12 @@ h1 {
 
 h2 {
   font-size: 14px;
+}
+
+@media screen and (min-width: 560px) {
+  h2 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -36,6 +48,12 @@ h3 {
   font-size: 12px;
 }
 
+@media screen and (min-width: 560px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   h3 {
     font-size: 20px;
@@ -46,6 +64,12 @@ h4 {
   font-size: 10px;
 }
 
+@media screen and (min-width: 560px) {
+  h4 {
+    font-size: 12px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   h4 {
     font-size: 16px;
@@ -53,9 +77,14 @@ h4 {
 }
 
 p {
-  font-size: 14px;
   font-weight: normal;
   color: #767676;
+}
+
+@media screen and (min-width: 560px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -64,48 +93,61 @@ p {
   }
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
 .btn {
-  display: block;
   font-size: 14px;
   font-weight: 500;
-  text-decoration: none;
   color: #FFFFFF;
   background-color: #141414;
-  margin: 24px 8px 40px;
-  padding: 14px 0;
-  left: 0;
-  right: 0;
   text-align: center;
+  display: block;
+  margin: 24px auto 40px;
+  padding: 12px;
+  max-width: 327px;
+}
+
+@media screen and (min-width: 560px) {
+  .btn {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .btn {
     font-size: 18px;
-    width: 382px;
-    margin: 72px auto 136px;
+    max-width: 486px;
+    padding: 24px;
   }
 }
 
-header {
+.header {
   position: relative;
   height: 46px;
   background-color: #FFFFFF;
+  overflow-y: hidden;
 }
 
 @media screen and (min-width: 560px) {
-  header {
-    width: 50%;
-    margin-left: 50%;
+  .header {
+    height: 60px;
   }
 }
 
 @media screen and (min-width: 960px) {
-  header {
-    height: 103px;
+  .header {
+    height: 64px;
   }
 }
 
-header .header__logo {
+.header__logo {
   position: absolute;
   width: 43.25px;
   margin: 11px auto;
@@ -113,17 +155,87 @@ header .header__logo {
   left: 0;
 }
 
-@media screen and (min-width: 960px) {
-  header .header__logo {
-    width: 96px;
-    margin-top: 21px;
+@media screen and (min-width: 560px) {
+  .header__logo {
+    width: 60px;
   }
 }
 
-header .header__menu {
+@media screen and (min-width: 960px) {
+  .header__logo {
+    width: 80px;
+  }
+}
+
+.header__menu {
+  width: 25px;
+  height: 11px;
   position: absolute;
   right: 17px;
-  margin: 18px 0;
+  margin: 17px 0;
+}
+
+@media screen and (min-width: 560px) {
+  .header__menu {
+    width: 28px;
+    height: 12.5px;
+    right: 24px;
+    margin: 24px 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__menu {
+    width: 32px;
+    height: 14px;
+    right: 25px;
+    margin: 25px 0;
+  }
+}
+
+.header__MenuLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #000;
+}
+
+@media screen and (min-width: 560px) {
+  .header__MenuLine {
+    width: 28px;
+    height: 3.5px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__MenuLine {
+    width: 32px;
+    height: 4px;
+  }
+}
+
+.header__LineTop {
+  position: absolute;
+}
+
+.header__LineBottom {
+  position: absolute;
+  top: 8px;
+}
+
+@media screen and (min-width: 560px) {
+  .header__LineBottom {
+    top: 9px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__LineBottom {
+    top: 10px;
+  }
 }
 
 .magazine {
@@ -133,20 +245,13 @@ header .header__menu {
   margin-bottom: 32px;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .magazine {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: auto;
-    top: -46px;
     z-index: -1000;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .magazine {
-    top: -103px;
   }
 }
 
@@ -157,13 +262,21 @@ header .header__menu {
 
 @media screen and (min-width: 560px) {
   .magazine__headline {
+    height: 568px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .magazine__headline {
+    position: relative;
     display: block;
     width: 50%;
-    height: auto;
+    height: 80vh;
   }
 }
 
 .magazine__BackGround {
+  fill: blur(9px);
   width: 100%;
   height: 100%;
 }
@@ -177,9 +290,18 @@ header .header__menu {
 
 @media screen and (min-width: 560px) {
   .magazine__thumbnail {
+    width: 352px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .magazine__thumbnail {
+    display: inline-block;
     top: 0;
-    left: 14%;
-    right: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }
 
@@ -189,25 +311,31 @@ header .header__menu {
   overflow-y: hidden;
 }
 
-@media screen and (min-width: 560px) {
-  .magazine__main {
-    margin: auto;
-    padding: 0 24px;
-    width: 50%;
-    margin-top: 46px;
-  }
-}
-
 @media screen and (min-width: 960px) {
   .magazine__main {
-    margin-top: 136px;
+    width: 50%;
     padding: 0 48px;
+    margin-top: 0;
   }
 }
 
 .magazine__sentence {
   margin: auto;
   text-align: justify;
+}
+
+@media screen and (min-width: 560px) {
+  .magazine__sentence {
+    max-width: 560px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .magazine__sentence {
+    height: 60vh;
+    overflow-y: hidden;
+    max-width: 640px;
+  }
 }
 
 .magazine__numbering {
@@ -233,6 +361,12 @@ header .header__menu {
   text-align: justify;
 }
 
+@media screen and (min-width: 560px) {
+  .magazine__text {
+    line-height: 32px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .magazine__text {
     line-height: 40px;
@@ -241,8 +375,6 @@ header .header__menu {
 
 .agenda {
   position: relative;
-  top: -33px;
-  height: 368px;
   background-color: #FFFFFF;
   margin-bottom: 32px;
 }
@@ -250,7 +382,6 @@ header .header__menu {
 @media screen and (min-width: 960px) {
   .agenda {
     height: initial;
-    top: -135px;
   }
 }
 
@@ -281,6 +412,12 @@ header .header__menu {
 
 .agenda__list {
   margin: auto;
+}
+
+@media screen and (min-width: 960px) {
+  .agenda__list {
+    margin-bottom: 48px;
+  }
 }
 
 .agenda__item {
@@ -371,31 +508,35 @@ header .header__menu {
 }
 
 .AllMagazines {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
-  top: -32px;
   background-color: #FFFFFF;
-}
-
-@media screen and (min-width: 560px) {
-  .AllMagazines {
-    top: -77px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .AllMagazines {
-    top: -134px;
-  }
+  padding: 32px 0;
+  width: 100%;
 }
 
 .AllMagazines__AllBlocks {
   margin-top: 48px;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .AllMagazines__block {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -403,6 +544,13 @@ header .header__menu {
   width: 98px;
   height: 206px;
   margin: 0 12px 21px;
+}
+
+@media screen and (min-width: 560px) {
+  .AllMagazines__block {
+    height: 218px;
+    overflow-y: hidden;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -461,7 +609,6 @@ header .header__menu {
   background-color: #272727;
   font-weight: 400;
   margin-top: 64px;
-  margin-bottom: 44px;
 }
 
 .footer__container {
@@ -499,11 +646,6 @@ header .header__menu {
 
 .footer__logo {
   width: 85px;
-}
-
-.footer__nav {
-  -webkit-box-shadow: 0px  -2px 6px 6px #F5F5F5;
-          box-shadow: 0px  -2px 6px 6px #F5F5F5;
 }
 
 @media screen and (min-width: 960px) {
@@ -582,6 +724,12 @@ header .header__menu {
   margin-right: 8px;
 }
 
+@media screen and (min-width: 560px) {
+  .footer__SocialTitle {
+    font-size: 11px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .footer__SocialTitle {
     font-size: 9px;
@@ -608,6 +756,7 @@ header .header__menu {
   height: 24px;
   width: 24px;
   margin-bottom: 8px;
+  overflow-y: hidden;
 }
 
 @media screen and (min-width: 960px) {

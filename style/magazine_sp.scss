@@ -33,6 +33,7 @@ body {
 h1 {
   font-size: 18px;
   @include mq() {
+    font-size: 24px;
   }
   @include mq(pc) {
     font-size: 32px;
@@ -41,6 +42,7 @@ h1 {
 h2 {
   font-size: 14px;
   @include mq() {
+    font-size: 18px;
   }
   @include mq(pc) {
     font-size: 24px;
@@ -49,6 +51,7 @@ h2 {
 h3 {
   font-size: 12px;
   @include mq() {
+    font-size: 16px;
   }
   @include mq(pc) {
     font-size: 20px;
@@ -57,59 +60,65 @@ h3 {
 h4 {
   font-size: 10px;
   @include mq() {
+    font-size: 12px;
   }
   @include mq(pc) {
     font-size: 16px;
   }
 }
 p {
-  font-size: 14px;
   font-weight: normal;
   color: $gray;
   @include mq() {
+    font-size: 16px;
   }
   @include mq(pc) {
     font-size: 18px;
   }
 }
+a{
+  color: inherit;
+  text-decoration: none;
+}
 
+ol, ul {
+  list-style: none;
+}
 //Molecules
 .btn {
-  display: block;
   font-size: 14px;
   font-weight: 500;
-  text-decoration: none;
   color: $white;
   background-color: $black;
-  margin: 24px 8px 40px;
-  padding: 14px 0;
-  left: 0;
-  right: 0;
   text-align: center;
+  display: block;
+  margin: 24px auto 40px;
+  padding: 12px;
+  max-width: 327px;
   @include mq() {
+    font-size: 16px;
   }
   @include mq(pc) {
     font-size: 18px;
-    width: 382px;
-    margin: 72px auto 136px;
+    max-width: 486px;
+    padding: 24px;
   }
 }
 .btn--icon {
 }
 
 //header
-header{
+.header{
   position: relative;
   height: 46px;
   background-color: $white;
+  overflow-y: hidden;
   @include mq() {
-    width: 50%;
-    margin-left: 50%;
+    height: 60px;
   }
   @include mq(pc) {
-    height: 103px;
+    height: 64px;
   }
-  .header{
   &__logo {
     position: absolute;
     width: 43.25px;
@@ -117,17 +126,60 @@ header{
     right: 0;
     left: 0;
     @include mq() {
+      width: 60px;
     }
     @include mq(pc) {
-      width: 96px;
-      margin-top: 21px;
+      width: 80px;
     }
   }
   &__menu{
+    width: 25px;
+    height: 11px;
     position: absolute;
     right: 17px;
-    margin: 18px 0;
+    margin: 17px 0;
+    @include mq() {
+      width: 28px;
+      height: 12.5px;
+      right: 24px;
+      margin: 24px 0;
+    }
+    @include mq(pc) {
+      width: 32px;
+      height: 14px;
+      right: 25px;
+      margin: 25px 0;
+    }
   }
+  &__MenuLine{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    @include mq() {
+      width: 28px;
+      height: 3.5px;
+    }
+    @include mq(pc) {
+      width: 32px;
+      height: 4px;
+    }
+  }
+  &__LineTop{
+    position: absolute;
+  }
+  &__LineBottom{
+    position: absolute;
+    top: 8px;
+    @include mq() {
+      top: 9px;
+    }
+    @include mq(pc) {
+      top: 10px;
+    }
   }
 }
 
@@ -138,27 +190,27 @@ header{
   background-color: $white;
   margin-bottom: 32px;
   @include mq() {
-    display: flex;
-    height: auto;
-    top: -46px;
-    z-index: -1000;
   }
   @include mq(pc) {
-    top: -103px;
+    display: flex;
+    height: auto;
+    z-index: -1000;
   }
   &__headline{
   height:  381px;
   overflow: hidden;
     @include mq() {
-      display: block;
-      width: 50%;
-      height: auto
-      ;
+      height: 568px;
     }
     @include mq(pc) {
+      position: relative;
+      display: block;
+      width: 50%;
+      height: 80vh
     }
   }
   &__BackGround{
+    fill: blur(9px);
     width: 100%;
     height: 100%;
   }
@@ -168,11 +220,15 @@ header{
     left: 0;
     margin: 23px auto;
       @include mq() {
-        top: 0;
-        left: 14%;
-        right: unset;
+        width: 352px;
       }
       @include mq(pc) {
+        display: inline-block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
       }
   }
   &__main{
@@ -180,19 +236,24 @@ header{
     padding: 0 16px;
     overflow-y: hidden;
     @include mq() {
-      margin: auto;
-      padding: 0 24px;
-      width: 50%;
-      margin-top: 46px;
     }
     @include mq(pc) {
-      margin-top: 136px;
+      width: 50%;
       padding: 0 48px;
+      margin-top: 0;
     }
   }
   &__sentence{
     margin: auto;
     text-align: justify;
+    @include mq() {
+      max-width: 560px;
+    }
+    @include mq(pc) {
+      height: 60vh;
+      overflow-y: hidden;
+      max-width: 640px;
+    }
   }
   &__numbering{
     margin-top: 16px;
@@ -215,6 +276,7 @@ header{
     line-height: 24px;
     text-align: justify;
     @include mq() {
+      line-height: 32px;
     }
     @include mq(pc) {
       line-height: 40px;
@@ -225,15 +287,12 @@ header{
 //agenda
 .agenda{
   position: relative;
-  top: -33px;
-  height: 368px;
   background-color: $white;
   margin-bottom: 32px;
   @include mq() {
   }
   @include mq(pc) {
     height: initial;
-    top: -135px;
   }
   &__headline{
     position: relative;
@@ -258,6 +317,11 @@ header{
   }
   &__list{
     margin: auto;
+    @include mq() {
+    }
+    @include mq(pc) {
+      margin-bottom: 48px;
+    }
   }
   &__item{
     display: flex;
@@ -328,26 +392,33 @@ header{
 
 //AllMagazines
 .AllMagazines{
-  display: flex;
   position: relative;
-  top: -32px;
   background-color: $white;
+  padding: 32px 0;
+  width: 100%;
   @include mq() {
-    top: -77px;
   }
   @include mq(pc) {
-    top: -134px
   }
   &__AllBlocks{
     margin-top: 48px;
+    margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
   }
   &__block{
+    justify-content: center;
+    display: flex;
     display: inline-flex;
     position: relative;
     width: 98px;
     height: 206px;
     margin: 0 12px 21px;
     @include mq() {
+      height: 218px;
+      overflow-y: hidden;
     }
     @include mq(pc) {
       width: 187px;
@@ -397,15 +468,12 @@ header{
   background-color: #272727;
   font-weight: 400;
   margin-top: 64px;
-  margin-bottom: 44px;
   &__container{
     position: relative;
     padding-top: 28px;
     padding-bottom: 32px;
     margin-left: 16px;
     margin-right: 16px;
-    @include mq() {
-    }
     @include mq(pc) {
       display: flex;
       align-items: center;
@@ -427,7 +495,6 @@ header{
     width: 85px;
   }
   &__nav {
-    box-shadow: 0px  -2px 6px 6px #F5F5F5;
     @include mq() {
     }
     @include mq(pc) {
@@ -482,6 +549,7 @@ header{
     writing-mode: vertical-rl;
     margin-right: 8px;
     @include mq() {
+      font-size: 11px;
     }
     @include mq(pc) {
       font-size: 9px;
@@ -501,6 +569,7 @@ header{
     height: 24px;
     width: 24px;
     margin-bottom: 8px;
+    overflow-y: hidden;
     @include mq() {
     }
     @include mq(pc) {

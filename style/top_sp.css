@@ -15,6 +15,12 @@ h1 {
   font-size: 18px;
 }
 
+@media screen and (min-width: 560px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   h1 {
     font-size: 32px;
@@ -23,6 +29,12 @@ h1 {
 
 h2 {
   font-size: 14px;
+}
+
+@media screen and (min-width: 560px) {
+  h2 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -35,6 +47,12 @@ h3 {
   font-size: 12px;
 }
 
+@media screen and (min-width: 560px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   h3 {
     font-size: 20px;
@@ -43,6 +61,12 @@ h3 {
 
 h4 {
   font-size: 10px;
+}
+
+@media screen and (min-width: 560px) {
+  h4 {
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -54,6 +78,12 @@ h4 {
 p {
   font-weight: normal;
   color: #767676;
+}
+
+@media screen and (min-width: 560px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -77,7 +107,15 @@ ol, ul {
   color: #FFFFFF;
   background-color: #141414;
   margin: 24px 24px 40px;
-  padding: 12px auto;
+  padding: 12px;
+  max-width: 327px;
+}
+
+@media screen and (min-width: 960px) {
+  .btn {
+    max-width: 486px;
+    padding: 24px;
+  }
 }
 
 .FirstView {
@@ -105,11 +143,35 @@ ol, ul {
   left: 0;
 }
 
+@media screen and (min-width: 560px) {
+  .FirstView__items {
+    height: 66.5%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .FirstView__items {
+    height: 67.5%;
+  }
+}
+
 .FirstView__logo {
   left: 25%;
   top: 38%;
   width: 193px;
-  height: 110px;
+  height: auto;
+}
+
+@media screen and (min-width: 560px) {
+  .FirstView__logo {
+    width: 212px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .FirstView__logo {
+    width: 230px;
+  }
 }
 
 .FirstView__text {
@@ -124,12 +186,48 @@ ol, ul {
   margin-top: 12px;
 }
 
+@media screen and (min-width: 560px) {
+  .FirstView__text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .FirstView__text {
+    font-size: 17px;
+  }
+}
+
 .FirstView__text01 {
   width: 205px;
 }
 
+@media screen and (min-width: 560px) {
+  .FirstView__text01 {
+    width: 235px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .FirstView__text01 {
+    width: 260px;
+  }
+}
+
 .FirstView__text02 {
   width: 235px;
+}
+
+@media screen and (min-width: 560px) {
+  .FirstView__text02 {
+    width: 268px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .FirstView__text02 {
+    width: 288px;
+  }
 }
 
 .FirstView__next {
@@ -161,6 +259,19 @@ ol, ul {
 .header {
   position: relative;
   height: 46px;
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 560px) {
+  .header {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header {
+    height: 64px;
+  }
 }
 
 .header__logo {
@@ -171,6 +282,18 @@ ol, ul {
   left: 0;
 }
 
+@media screen and (min-width: 560px) {
+  .header__logo {
+    width: 60px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__logo {
+    width: 80px;
+  }
+}
+
 .header__menu {
   width: 25px;
   height: 11px;
@@ -179,14 +302,46 @@ ol, ul {
   margin: 17px 0;
 }
 
+@media screen and (min-width: 560px) {
+  .header__menu {
+    width: 28px;
+    height: 12.5px;
+    right: 24px;
+    margin: 24px 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__menu {
+    width: 32px;
+    height: 14px;
+    right: 25px;
+    margin: 25px 0;
+  }
+}
+
 .header__MenuLine {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
-  width: 50px;
+  width: 25px;
   height: 3px;
   background: #000;
+}
+
+@media screen and (min-width: 560px) {
+  .header__MenuLine {
+    width: 28px;
+    height: 3.5px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__MenuLine {
+    width: 32px;
+    height: 4px;
+  }
 }
 
 .header__LineTop {
@@ -196,6 +351,18 @@ ol, ul {
 .header__LineBottom {
   position: absolute;
   top: 8px;
+}
+
+@media screen and (min-width: 560px) {
+  .header__LineBottom {
+    top: 9px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__LineBottom {
+    top: 10px;
+  }
 }
 
 .carousel {
@@ -276,6 +443,12 @@ ol, ul {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 7px;
+}
+
+@media screen and (min-width: 560px) {
+  .recommend__numbering {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1068px) {
@@ -511,6 +684,12 @@ ol, ul {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   margin-right: 8px;
+}
+
+@media screen and (min-width: 560px) {
+  .footer__SocialTitle {
+    font-size: 11px;
+  }
 }
 
 @media screen and (min-width: 960px) {
