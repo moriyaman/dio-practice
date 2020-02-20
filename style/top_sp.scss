@@ -118,11 +118,20 @@ ol, ul {
   position: relative;
   text-align: center;
   &__LogoLine {
-    background-image: url(../images/logoline.png);
+    padding-top: 12%;
+    background: url(../images/logoline.png);
     background-repeat: repeat-x;
-    border: 0;
-    height: 70px;
-    width: 100%;
+    background-position: left;
+    background-size: cover;
+    min-height: 46px;
+    max-height: 60px;
+    @include mq() {
+      padding-top: 10%;
+      max-height: 76px;
+    }
+    @include mq(pc) {
+      padding-top: 5%;
+    }
   }
   &__items{
     height: 65%;

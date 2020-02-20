@@ -276,7 +276,9 @@ ol, ul {
 }
 
 .magazine__BackGround {
-  fill: blur(9px);
+  background-position: center center;
+  -webkit-filter: blur(9px);
+          filter: blur(9px);
   width: 100%;
   height: 100%;
 }
@@ -508,74 +510,62 @@ ol, ul {
 }
 
 .AllMagazines {
-  position: relative;
-  background-color: #FFFFFF;
-  padding: 32px 0;
-  width: 100%;
+  padding: 0 16px;
+  max-width: 385px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 560px) {
+  .AllMagazines {
+    padding: 0 36px;
+    max-width: 912px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .AllMagazines {
+    padding: 0 56px;
+    max-width: 1440px;
+  }
 }
 
 .AllMagazines__AllBlocks {
-  margin-top: 48px;
-  margin: 0 auto;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  display: -ms-grid;
+  display: grid;
+  gap: 12px;
+  -ms-grid-columns: (minmax(110px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+}
+
+@media screen and (min-width: 560px) {
+  .AllMagazines__AllBlocks {
+    gap: 26px;
+    -ms-grid-columns: (minmax(148px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .AllMagazines__AllBlocks {
+    gap: 40px;
+    -ms-grid-columns: (minmax(160px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
 }
 
 .AllMagazines__block {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  width: 98px;
-  height: 206px;
-  margin: 0 12px 21px;
-}
-
-@media screen and (min-width: 560px) {
-  .AllMagazines__block {
-    height: 218px;
-    overflow-y: hidden;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .AllMagazines__block {
-    width: 187px;
-    height: 371px;
-    margin: 0 24px 56px;
-  }
 }
 
 .AllMagazines__thumbnail {
-  position: absolute;
   top: 0;
   right: 0;
-  width: 98px;
-  height: 147px;
+  max-width: 100%;
+  height: auto;
   -webkit-filter: drop-shadow(0px 0px 6px #BFBFBF);
           filter: drop-shadow(0px 0px 6px #BFBFBF);
-}
-
-@media screen and (min-width: 960px) {
-  .AllMagazines__thumbnail {
-    width: 187px;
-    height: 279px;
-  }
 }
 
 .AllMagazines__numbering {

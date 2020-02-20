@@ -210,7 +210,8 @@ ol, ul {
     }
   }
   &__BackGround{
-    fill: blur(9px);
+    background-position: center center;
+    filter: blur(9px);
     width: 100%;
     height: 100%;
   }
@@ -392,52 +393,42 @@ ol, ul {
 
 //AllMagazines
 .AllMagazines{
-  position: relative;
-  background-color: $white;
-  padding: 32px 0;
-  width: 100%;
+  padding: 0 16px;
+  max-width: 385px;
+  margin: 0 auto;
   @include mq() {
+    padding: 0 36px;
+    max-width: 912px;
   }
   @include mq(pc) {
+    padding: 0 56px;
+    max-width: 1440px;
   }
   &__AllBlocks{
-    margin-top: 48px;
-    margin: 0 auto;
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: start;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    @include mq() {
+      gap: 26px;
+      grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    }
+    @include mq(pc) {
+      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
   }
   &__block{
     justify-content: center;
-    display: flex;
-    display: inline-flex;
-    position: relative;
-    width: 98px;
-    height: 206px;
-    margin: 0 12px 21px;
-    @include mq() {
-      height: 218px;
-      overflow-y: hidden;
-    }
-    @include mq(pc) {
-      width: 187px;
-      height: 371px;
-      margin: 0 24px 56px;
-    }
   }
   &__thumbnail{
-    position: absolute;
     top: 0;
     right: 0;
-    width: 98px;
-    height: 147px;
+    max-width: 100%;
+    height: auto;
     filter: drop-shadow(0px 0px 6px #BFBFBF);
     @include mq() {
     }
     @include mq(pc) {
-      width: 187px;
-      height: 279px;
     }
   }
   &__numbering{

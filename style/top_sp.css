@@ -128,11 +128,26 @@ ol, ul {
 }
 
 .FirstView__LogoLine {
-  background-image: url(../images/logoline.png);
+  padding-top: 12%;
+  background: url(../images/logoline.png);
   background-repeat: repeat-x;
-  border: 0;
-  height: 70px;
-  width: 100%;
+  background-position: left;
+  background-size: cover;
+  min-height: 46px;
+  max-height: 60px;
+}
+
+@media screen and (min-width: 560px) {
+  .FirstView__LogoLine {
+    padding-top: 10%;
+    max-height: 76px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .FirstView__LogoLine {
+    padding-top: 5%;
+  }
 }
 
 .FirstView__items {
