@@ -101,23 +101,6 @@ ol, ul {
   list-style: none;
 }
 
-.btn {
-  font-size: 14px;
-  font-weight: 500;
-  color: #FFFFFF;
-  background-color: #141414;
-  margin: 24px 24px 40px;
-  padding: 12px;
-  max-width: 327px;
-}
-
-@media screen and (min-width: 960px) {
-  .btn {
-    max-width: 486px;
-    padding: 24px;
-  }
-}
-
 .FirstView {
   overflow: hidden;
   width: 100%;

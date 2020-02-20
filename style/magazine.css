@@ -242,7 +242,6 @@ ol, ul {
   overflow-y: hidden;
   position: relative;
   background-color: #FFFFFF;
-  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 960px) {

@@ -104,8 +104,6 @@ ol, ul {
     padding: 24px;
   }
 }
-.btn--icon {
-}
 
 //header
 .header{
@@ -188,9 +186,6 @@ ol, ul {
   overflow-y: hidden;
   position: relative;
   background-color: $white;
-  margin-bottom: 32px;
-  @include mq() {
-  }
   @include mq(pc) {
     display: flex;
     height: auto;
@@ -236,8 +231,6 @@ ol, ul {
     margin: auto;
     padding: 0 16px;
     overflow-y: hidden;
-    @include mq() {
-    }
     @include mq(pc) {
       width: 50%;
       padding: 0 48px;
@@ -258,15 +251,11 @@ ol, ul {
   }
   &__numbering{
     margin-top: 16px;
-    @include mq() {
-    }
     @include mq(pc) {
       margin-bottom: 20px;
     }
   }
   &__title{
-    @include mq() {
-    }
     @include mq(pc) {
       margin-bottom: 32px;
     }
@@ -290,8 +279,6 @@ ol, ul {
   position: relative;
   background-color: $white;
   margin-bottom: 32px;
-  @include mq() {
-  }
   @include mq(pc) {
     height: initial;
   }
@@ -299,8 +286,6 @@ ol, ul {
     position: relative;
     height: 34px;
     margin-bottom: 12px;
-    @include mq() {
-    }
     @include mq(pc) {
       height: 50px;
       margin: 48px 0 12px 0;
@@ -318,8 +303,6 @@ ol, ul {
   }
   &__list{
     margin: auto;
-    @include mq() {
-    }
     @include mq(pc) {
       margin-bottom: 48px;
     }
@@ -336,8 +319,6 @@ ol, ul {
     border-bottom: none;
     align-items: center;
     justify-content: center;
-    @include mq() {
-    }
     @include mq(pc) {
       position: relative;
       justify-content: initial;
@@ -350,8 +331,6 @@ ol, ul {
     color: #003F70;
     left: 0;
     margin-right: 16px;
-    @include mq() {
-    }
     @include mq(pc) {
       font-size: 26px;
       padding-left: 48px;
@@ -366,8 +345,6 @@ ol, ul {
     align-items: center;
     justify-content: center;
     margin-right: 16px;
-    @include mq() {
-    }
     @include mq(pc) {
       width: auto;
       padding-left: 64px;
@@ -379,8 +356,6 @@ ol, ul {
     width: 140px;
     height: 61px;
     margin-top: 8px;
-    @include mq() {
-    }
     @include mq(pc) {
       position: absolute;
       width: 190px;
@@ -426,17 +401,11 @@ ol, ul {
     max-width: 100%;
     height: auto;
     filter: drop-shadow(0px 0px 6px #BFBFBF);
-    @include mq() {
-    }
-    @include mq(pc) {
-    }
   }
   &__numbering{
     position: absolute;
     top: 153px;
     left: 0;
-    @include mq() {
-    }
     @include mq(pc) {
       top: 291px;
     }
@@ -446,8 +415,6 @@ ol, ul {
     top: 170px;
     left: 0;
     justify-content: center;
-    @include mq() {
-    }
     @include mq(pc) {
       top: 311px;
     }
@@ -476,8 +443,6 @@ ol, ul {
   }
   &__LogoWrapper{
     display: none;
-    @include mq() {
-    }
     @include mq(pc) {
       display: block;
     }
@@ -486,8 +451,6 @@ ol, ul {
     width: 85px;
   }
   &__nav {
-    @include mq() {
-    }
     @include mq(pc) {
       display: flex;
       flex: 1 1 auto;
@@ -499,8 +462,6 @@ ol, ul {
     color: $white;
     font-weight: 500;
     margin-bottom: 12px;
-    @include mq() {
-    }
     @include mq(pc) {
       font-size: 12px;
       margin-bottom: initial;
@@ -508,15 +469,11 @@ ol, ul {
   }
   &__border{
     display: none;
-    @include mq() {
-    }
     @include mq(pc) {
       display: flex;
       font-size: 12px;
       margin: 0 8px;
     }
-  }
-  &__about{
   }
   &__social{
     display: flex;
@@ -525,8 +482,6 @@ ol, ul {
     right: 0;
     justify-content: flex-end;
     align-items: flex-start;
-    @include mq() {
-    }
     @include mq(pc) {
       position: initial;
       align-items: center;
@@ -550,8 +505,6 @@ ol, ul {
   }
   &__SocialItems{
     display: block;
-    @include mq() {
-    }
     @include mq(pc) {
       display: flex;
     }
@@ -561,8 +514,6 @@ ol, ul {
     width: 24px;
     margin-bottom: 8px;
     overflow-y: hidden;
-    @include mq() {
-    }
     @include mq(pc) {
       height: 20px;
       width: 20px;
@@ -570,19 +521,11 @@ ol, ul {
       margin-bottom: initial;
     }
   }
-  &__icon {
-    @include mq() {
-    }
-    @include mq(pc) {
-    }
-  }
   &__CopyRight {
     color: #AEAEAE;
     font-size: 8px;
     font-weight: normal;
     margin-top: 12px;
-    @include mq() {
-    }
     @include mq(pc) {
       font-size: 9px;
       text-align: right;
