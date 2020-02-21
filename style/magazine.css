@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  font-family: "Noto Sans CJK JP", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #141414;
@@ -129,20 +129,25 @@ ol, ul {
 }
 
 .header {
+  background-color: #FFFFFF;
+}
+
+.header__wrapper {
   position: relative;
   height: 46px;
-  background-color: #FFFFFF;
   overflow-y: hidden;
+  max-width: 1680px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 560px) {
-  .header {
+  .header__wrapper {
     height: 60px;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .header {
+  .header__wrapper {
     height: 64px;
   }
 }
@@ -271,6 +276,8 @@ ol, ul {
     display: block;
     width: 50%;
     height: 80vh;
+    max-width: 830px;
+    margin: 0 auto;
   }
 }
 
@@ -278,12 +285,13 @@ ol, ul {
   background-position: center center;
   -webkit-filter: blur(9px);
           filter: blur(9px);
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
 }
 
 .magazine__thumbnail {
   position: absolute;
+  top: 0;
   right: 0;
   left: 0;
   margin: 23px auto;
@@ -298,10 +306,7 @@ ol, ul {
 @media screen and (min-width: 960px) {
   .magazine__thumbnail {
     display: inline-block;
-    top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
     margin: auto;
   }
 }
@@ -317,6 +322,8 @@ ol, ul {
     width: 50%;
     padding: 0 48px;
     margin-top: 0;
+    max-width: 830px;
+    margin: 0 auto;
   }
 }
 
@@ -388,36 +395,60 @@ ol, ul {
 
 .agenda__headline {
   position: relative;
-  height: 34px;
-  margin-bottom: 12px;
+  width: 80vw;
+  height: 8vw;
+  margin: 0 auto 12px auto;
+}
+
+@media screen and (min-width: 560px) {
+  .agenda__headline {
+    max-width: 728px;
+    height: 6vw;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .agenda__headline {
+    max-width: 1080px;
     height: 50px;
-    margin: 48px 0 12px 0;
+    margin: 48px auto 12px auto;
   }
 }
 
 .agenda__text {
   position: absolute;
+  font-size: 2.5vw;
   top: 10px;
   left: 16px;
 }
 
+@media screen and (min-width: 960px) {
+  .agenda__text {
+    font-size: 24px;
+  }
+}
+
 .agenda__icon {
   position: absolute;
+  width: 2.5vw;
   top: 16px;
   right: 24px;
 }
 
-.agenda__list {
-  margin: auto;
+@media screen and (min-width: 960px) {
+  .agenda__icon {
+    max-width: 24px;
+  }
 }
 
-@media screen and (min-width: 960px) {
+.agenda__list {
+  background-color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 560px) {
   .agenda__list {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
 }
 
@@ -425,54 +456,74 @@ ol, ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  overflow-y: hidden;
+  width: 80vw;
+  height: auto;
+  padding: 3% 0;
+  margin: 0 auto;
   border-top: 1px;
   border-style: solid;
   border-color: #DEDEDE;
-  margin: auto;
-  margin: 8px 16px;
   border-left: none;
   border-right: none;
   border-bottom: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (min-width: 560px) {
+  .agenda__item {
+    padding: 4% 0;
+    max-width: 728px;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .agenda__item {
-    position: relative;
-    -webkit-box-pack: initial;
-        -ms-flex-pack: initial;
-            justify-content: initial;
-    height: 93px;
-    margin: auto 106px;
+    max-width: 1080px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .agenda__item {
+    height: 155px;
+    max-width: 1080px;
   }
 }
 
 .agenda__numbering {
-  font-size: 18px;
+  font-size: 3.5vw;
   color: #003F70;
   left: 0;
-  margin-right: 16px;
+  margin-right: 15px;
+  padding-left: 16px;
+}
+
+@media screen and (min-width: 560px) {
+  .agenda__numbering {
+    margin-right: 24px;
+    padding-left: 12px;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .agenda__numbering {
-    font-size: 26px;
-    padding-left: 48px;
+    font-size: 32px;
+    margin-right: 36px;
   }
 }
 
 .agenda__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   bottom: 0;
   left: 27px;
-  width: 166px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-size: 2.5vw;
+  width: 50%;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -480,31 +531,36 @@ ol, ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 16px;
+  padding-right: 8px;
+  text-align: justify;
+}
+
+@media screen and (min-width: 560px) {
+  .agenda__title {
+    padding-right: 16px;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .agenda__title {
-    width: auto;
-    padding-left: 64px;
+    font-size: 24px;
   }
 }
 
 .agenda__thumbnail {
+  position: absolute;
+  top: 0;
   bottom: 0;
-  right: 0;
-  width: 140px;
-  height: 61px;
-  margin-top: 8px;
+  right: 3%;
+  margin: auto 0;
+  width: 24vw;
+  height: auto;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 560px) {
   .agenda__thumbnail {
-    position: absolute;
-    width: 190px;
-    height: 77px;
-    margin-bottom: 8px;
-    right: 24px;
+    width: 28vw;
+    max-width: 328px;
   }
 }
 
@@ -568,29 +624,44 @@ ol, ul {
 }
 
 .AllMagazines__numbering {
-  position: absolute;
-  top: 153px;
-  left: 0;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 560px) {
+  .AllMagazines__numbering {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .AllMagazines__numbering {
-    top: 291px;
+    margin-top: 12px;
   }
 }
 
 .AllMagazines__title {
-  position: absolute;
-  top: 170px;
-  left: 0;
+  margin-top: 4px;
+  line-height: 20px;
+  letter-spacing: 0.5;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 560px) {
+  .AllMagazines__title {
+    margin-top: 6px;
+    line-height: 20px;
+    letter-spacing: 0.75;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .AllMagazines__title {
-    top: 311px;
+    margin-top: 8px;
+    line-height: 28px;
+    letter-spacing: 1;
   }
 }
 

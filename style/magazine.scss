@@ -22,7 +22,7 @@ $DarkGray: #393E42;
   margin: 0;
 }
 body {
-  font-family: "Noto Sans CJK JP","Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  font-family: "Noto Sans CJK JP", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: $black;
@@ -80,10 +80,10 @@ a{
   color: inherit;
   text-decoration: none;
 }
-
 ol, ul {
   list-style: none;
 }
+
 //Molecules
 .btn {
   font-size: 14px;
@@ -107,15 +107,19 @@ ol, ul {
 
 //header
 .header{
-  position: relative;
-  height: 46px;
   background-color: $white;
+  &__wrapper {
+    position: relative;
+  height: 46px;
   overflow-y: hidden;
   @include mq() {
     height: 60px;
   }
   @include mq(pc) {
     height: 64px;
+  }
+    max-width: 1680px;
+    margin: 0 auto;
   }
   &__logo {
     position: absolute;
@@ -201,17 +205,20 @@ ol, ul {
       position: relative;
       display: block;
       width: 50%;
-      height: 80vh
+      height: 80vh;
+      max-width: 830px;
+    margin: 0 auto;
     }
   }
   &__BackGround{
     background-position: center center;
     filter: blur(9px);
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
   }
   &__thumbnail{
     position: absolute;
+    top: 0;
     right: 0;
     left: 0;
     margin: 23px auto;
@@ -220,10 +227,7 @@ ol, ul {
       }
       @include mq(pc) {
         display: inline-block;
-        top: 0;
         bottom: 0;
-        left: 0;
-        right: 0;
         margin: auto;
       }
   }
@@ -235,6 +239,8 @@ ol, ul {
       width: 50%;
       padding: 0 48px;
       margin-top: 0;
+      max-width: 830px;
+      margin: 0 auto;
     }
   }
   &__sentence{
@@ -284,84 +290,124 @@ ol, ul {
   }
   &__headline{
     position: relative;
-    height: 34px;
-    margin-bottom: 12px;
+    width: 80vw;
+    height: 8vw;
+    margin: 0 auto 12px auto;
+    @include mq() {
+      max-width: 728px;
+      height: 6vw;
+    }
     @include mq(pc) {
+      max-width: 1080px;
       height: 50px;
-      margin: 48px 0 12px 0;
+      margin: 48px auto 12px auto;
     }
   }
   &__text{
     position: absolute;
+    font-size: 2.5vw;
     top: 10px;
     left: 16px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 24px;
+    }
   }
   &__icon{
     position: absolute;
+    width: 2.5vw;
     top: 16px;
     right: 24px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      max-width: 24px;
+    }
   }
   &__list{
-    margin: auto;
+    background-color: $white;
+    margin-bottom: 12px;
+    @include mq() {
+      margin-bottom: 24px;
+    }
     @include mq(pc) {
-      margin-bottom: 48px;
     }
   }
   &__item{
     display: flex;
+    position: relative;
+    overflow-y: hidden;
+    width: 80vw;
+    height: auto;
+    padding: 3% 0;
+    margin: 0 auto;
     border-top: 1px;
     border-style: solid;
     border-color: #DEDEDE;
-    margin: auto;
-    margin: 8px 16px;
     border-left: none;
     border-right: none;
     border-bottom: none;
     align-items: center;
-    justify-content: center;
+    @include mq() {
+      padding: 4% 0;
+      max-width: 728px;
+    }
     @include mq(pc) {
-      position: relative;
-      justify-content: initial;
-      height: 93px;
-      margin: auto 106px;
+      max-width: 1080px;
+    }
+    @media screen and (min-width:1200px) {
+      height: 155px;
+      max-width: 1080px;
     }
   }
   &__numbering{
-    font-size: 18px;
+    font-size: 3.5vw;
     color: #003F70;
     left: 0;
-    margin-right: 16px;
+    margin-right: 15px;
+    padding-left: 16px;
+    @include mq() {
+      margin-right: 24px;
+      padding-left: 12px;
+    }
     @include mq(pc) {
-      font-size: 26px;
-      padding-left: 48px;
+      font-size: 32px;
+      margin-right: 36px;
     }
   }
   &__title{
+    display: flex;
     top: 0;
     bottom: 0;
     left: 27px;
-    width: 166px;
+    font-size: 2.5vw;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 16px;
+    padding-right: 8px;
+    text-align: justify;
+    @include mq() {
+      padding-right: 16px;
+    }
     @include mq(pc) {
-      width: auto;
-      padding-left: 64px;
+      font-size: 24px;
     }
   }
   &__thumbnail{
+    position: absolute;
+    top: 0;
     bottom: 0;
-    right: 0;
-    width: 140px;
-    height: 61px;
-    margin-top: 8px;
+    right: 3%;
+    margin:  auto 0;
+    width: 24vw;
+    height: auto;
+    @include mq() {
+      width: 28vw;
+      max-width: 328px;
+    }
     @include mq(pc) {
-      position: absolute;
-      width: 190px;
-      height: 77px;
-      margin-bottom: 8px;
-      right: 24px;
     }
   }
 }
@@ -403,20 +449,29 @@ ol, ul {
     filter: drop-shadow(0px 0px 6px #BFBFBF);
   }
   &__numbering{
-    position: absolute;
-    top: 153px;
-    left: 0;
+    margin-top: 8px;
+    @include mq() {
+      margin-top: 10px;
+    }
     @include mq(pc) {
-      top: 291px;
+      margin-top: 12px;
     }
   }
   &__title{
-    position: absolute;
-    top: 170px;
-    left: 0;
+    margin-top: 4px;
+    line-height: 20px;
+    letter-spacing: 0.5;
     justify-content: center;
+    overflow-y: hidden;
+    @include mq() {
+      margin-top: 6px;
+      line-height: 20px;
+      letter-spacing: 0.75;
+    }
     @include mq(pc) {
-      top: 311px;
+      margin-top: 8px;
+      line-height: 28px;
+      letter-spacing: 1;
     }
   }
 }
