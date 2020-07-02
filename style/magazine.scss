@@ -1,0 +1,589 @@
+@charset "UTF-8";
+$breakpoints: (
+  'tb': 'screen and (min-width: 560px)',
+  'pc': 'screen and (min-width: 960px)',
+) !default;
+@mixin mq($breakpoint: tb) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//Premise
+$main: #6B8EF0;
+$sub: #003F70;
+$white: #FFFFFF;
+$OffWhite: #F3F3F7;
+$black: #141414;
+$gray: #767676;
+$DarkGray: #393E42;
+* {
+  overflow-x: hidden;
+  margin: 0;
+}
+body {
+  font-family: "Noto Sans CJK JP", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: $black;
+  background-color: $OffWhite;
+}
+
+//Text
+h1 {
+  font-size: 18px;
+  @include mq() {
+    font-size: 24px;
+  }
+  @include mq(pc) {
+    font-size: 32px;
+  }
+}
+h2 {
+  font-size: 14px;
+  @include mq() {
+    font-size: 18px;
+  }
+  @include mq(pc) {
+    font-size: 24px;
+  }
+}
+h3 {
+  font-size: 12px;
+  @include mq() {
+    font-size: 16px;
+  }
+  @include mq(pc) {
+    font-size: 20px;
+  }
+}
+h4 {
+  font-size: 10px;
+  @include mq() {
+    font-size: 12px;
+  }
+  @include mq(pc) {
+    font-size: 16px;
+  }
+}
+p {
+  font-weight: normal;
+  color: $gray;
+  @include mq() {
+    font-size: 16px;
+  }
+  @include mq(pc) {
+    font-size: 18px;
+  }
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+ol, ul {
+  list-style: none;
+}
+
+//Molecules
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  display: block;
+  margin: 24px auto 40px;
+  padding: 12px;
+  max-width: 327px;
+  @include mq() {
+    font-size: 16px;
+  }
+  @include mq(pc) {
+    font-size: 18px;
+    max-width: 486px;
+    padding: 24px;
+  }
+}
+
+//header
+.header{
+  background-color: $white;
+  &__wrapper {
+    position: relative;
+  height: 46px;
+  overflow-y: hidden;
+  @include mq() {
+    height: 60px;
+  }
+  @include mq(pc) {
+    height: 64px;
+  }
+    max-width: 1680px;
+    margin: 0 auto;
+  }
+  &__logo {
+    position: absolute;
+    width: 43.25px;
+    margin: 11px auto;
+    right: 0;
+    left: 0;
+    @include mq() {
+      width: 60px;
+    }
+    @include mq(pc) {
+      width: 80px;
+    }
+  }
+  &__menu{
+    width: 25px;
+    height: 11px;
+    position: absolute;
+    right: 17px;
+    margin: 17px 0;
+    @include mq() {
+      width: 28px;
+      height: 12.5px;
+      right: 24px;
+      margin: 24px 0;
+    }
+    @include mq(pc) {
+      width: 32px;
+      height: 14px;
+      right: 25px;
+      margin: 25px 0;
+    }
+  }
+  &__MenuLine{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    @include mq() {
+      width: 28px;
+      height: 3.5px;
+    }
+    @include mq(pc) {
+      width: 32px;
+      height: 4px;
+    }
+  }
+  &__LineTop{
+    position: absolute;
+  }
+  &__LineBottom{
+    position: absolute;
+    top: 8px;
+    @include mq() {
+      top: 9px;
+    }
+    @include mq(pc) {
+      top: 10px;
+    }
+  }
+}
+
+//magazine
+.magazine{
+  overflow-y: hidden;
+  position: relative;
+  background-color: $white;
+  @include mq(pc) {
+    display: flex;
+    height: auto;
+    z-index: -1000;
+  }
+  &__headline{
+  height:  381px;
+  overflow: hidden;
+    @include mq() {
+      height: 568px;
+    }
+    @include mq(pc) {
+      position: relative;
+      display: block;
+      width: 50%;
+      height: 80vh;
+      max-width: 830px;
+    margin: 0 auto;
+    }
+  }
+  &__BackGround{
+    background-position: center center;
+    filter: blur(9px);
+    width: 120%;
+    height: 120%;
+  }
+  &__thumbnail{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 23px auto;
+      @include mq() {
+        width: 352px;
+      }
+      @include mq(pc) {
+        display: inline-block;
+        bottom: 0;
+        margin: auto;
+      }
+  }
+  &__main{
+    margin: auto;
+    padding: 0 16px;
+    overflow-y: hidden;
+    @include mq(pc) {
+      width: 50%;
+      padding: 0 48px;
+      margin-top: 0;
+      max-width: 830px;
+      margin: 0 auto;
+    }
+  }
+  &__sentence{
+    margin: auto;
+    text-align: justify;
+    @include mq() {
+      max-width: 560px;
+    }
+    @include mq(pc) {
+      height: 60vh;
+      overflow-y: hidden;
+      max-width: 640px;
+    }
+  }
+  &__numbering{
+    margin-top: 16px;
+    @include mq(pc) {
+      margin-bottom: 20px;
+    }
+  }
+  &__title{
+    @include mq(pc) {
+      margin-bottom: 32px;
+    }
+  }
+  &__text{
+    font-weight: lighter;
+    margin-top: 16px;
+    line-height: 24px;
+    text-align: justify;
+    @include mq() {
+      line-height: 32px;
+    }
+    @include mq(pc) {
+      line-height: 40px;
+    }
+  }
+}
+
+//agenda
+.agenda{
+  position: relative;
+  background-color: $white;
+  margin-bottom: 32px;
+  @include mq(pc) {
+    height: initial;
+  }
+  &__headline{
+    position: relative;
+    width: 80vw;
+    height: 8vw;
+    margin: 0 auto 12px auto;
+    @include mq() {
+      max-width: 728px;
+      height: 6vw;
+    }
+    @include mq(pc) {
+      max-width: 1080px;
+      height: 50px;
+      margin: 48px auto 12px auto;
+    }
+  }
+  &__text{
+    position: absolute;
+    font-size: 2.5vw;
+    top: 10px;
+    left: 16px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      font-size: 24px;
+    }
+  }
+  &__icon{
+    position: absolute;
+    width: 2.5vw;
+    top: 16px;
+    right: 24px;
+    @include mq() {
+    }
+    @include mq(pc) {
+      max-width: 24px;
+    }
+  }
+  &__list{
+    background-color: $white;
+    margin-bottom: 12px;
+    @include mq() {
+      margin-bottom: 24px;
+    }
+    @include mq(pc) {
+    }
+  }
+  &__item{
+    display: flex;
+    position: relative;
+    overflow-y: hidden;
+    width: 80vw;
+    height: auto;
+    padding: 3% 0;
+    margin: 0 auto;
+    border-top: 1px;
+    border-style: solid;
+    border-color: #DEDEDE;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    align-items: center;
+    @include mq() {
+      padding: 4% 0;
+      max-width: 728px;
+    }
+    @include mq(pc) {
+      max-width: 1080px;
+    }
+    @media screen and (min-width:1200px) {
+      height: 155px;
+      max-width: 1080px;
+    }
+  }
+  &__numbering{
+    font-size: 3.5vw;
+    color: #003F70;
+    left: 0;
+    margin-right: 15px;
+    padding-left: 16px;
+    @include mq() {
+      margin-right: 24px;
+      padding-left: 12px;
+    }
+    @include mq(pc) {
+      font-size: 32px;
+      margin-right: 36px;
+    }
+  }
+  &__title{
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 27px;
+    font-size: 2.5vw;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 8px;
+    text-align: justify;
+    @include mq() {
+      padding-right: 16px;
+    }
+    @include mq(pc) {
+      font-size: 24px;
+    }
+  }
+  &__thumbnail{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 3%;
+    margin:  auto 0;
+    width: 24vw;
+    height: auto;
+    @include mq() {
+      width: 28vw;
+      max-width: 328px;
+    }
+    @include mq(pc) {
+    }
+  }
+}
+
+//AllMagazines
+.AllMagazines{
+  padding: 0 16px;
+  max-width: 385px;
+  margin: 0 auto;
+  @include mq() {
+    padding: 0 36px;
+    max-width: 912px;
+  }
+  @include mq(pc) {
+    padding: 0 56px;
+    max-width: 1440px;
+  }
+  &__AllBlocks{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    @include mq() {
+      gap: 26px;
+      grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    }
+    @include mq(pc) {
+      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+  }
+  &__block{
+    justify-content: center;
+  }
+  &__thumbnail{
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 0px 6px #BFBFBF);
+  }
+  &__numbering{
+    margin-top: 8px;
+    @include mq() {
+      margin-top: 10px;
+    }
+    @include mq(pc) {
+      margin-top: 12px;
+    }
+  }
+  &__title{
+    margin-top: 4px;
+    line-height: 20px;
+    letter-spacing: 0.5;
+    justify-content: center;
+    overflow-y: hidden;
+    @include mq() {
+      margin-top: 6px;
+      line-height: 20px;
+      letter-spacing: 0.75;
+    }
+    @include mq(pc) {
+      margin-top: 8px;
+      line-height: 28px;
+      letter-spacing: 1;
+    }
+  }
+}
+
+//footer
+.footer {
+  background-color: #272727;
+  font-weight: 400;
+  margin-top: 64px;
+  &__container{
+    position: relative;
+    padding-top: 28px;
+    padding-bottom: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+    @include mq(pc) {
+      display: flex;
+      align-items: center;
+      margin-left: 32px;
+      margin-right: 32px;
+      padding-top: 48px;
+      padding-bottom: 40px;
+    }
+  }
+  &__LogoWrapper{
+    display: none;
+    @include mq(pc) {
+      display: block;
+    }
+  }
+  &__logo {
+    width: 85px;
+  }
+  &__nav {
+    @include mq(pc) {
+      display: flex;
+      flex: 1 1 auto;
+      margin: auto 0 auto 56px;
+    }
+  }
+  &__text {
+    display: flex;
+    color: $white;
+    font-weight: 500;
+    margin-bottom: 12px;
+    @include mq(pc) {
+      font-size: 12px;
+      margin-bottom: initial;
+    }
+  }
+  &__border{
+    display: none;
+    @include mq(pc) {
+      display: flex;
+      font-size: 12px;
+      margin: 0 8px;
+    }
+  }
+  &__social{
+    display: flex;
+    position: absolute;
+    top: 28px;
+    right: 0;
+    justify-content: flex-end;
+    align-items: flex-start;
+    @include mq(pc) {
+      position: initial;
+      align-items: center;
+    }
+  }
+  &__SocialTitle {
+    font-size: 10px;
+    font-weight: normal;
+    color: $white;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin-right: 8px;
+    @include mq() {
+      font-size: 11px;
+    }
+    @include mq(pc) {
+      font-size: 9px;
+      writing-mode: initial;
+      margin-right: initial;
+    }
+  }
+  &__SocialItems{
+    display: block;
+    @include mq(pc) {
+      display: flex;
+    }
+  }
+  &__SocialIcon {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 8px;
+    overflow-y: hidden;
+    @include mq(pc) {
+      height: 20px;
+      width: 20px;
+      margin-left: 8px;
+      margin-bottom: initial;
+    }
+  }
+  &__CopyRight {
+    color: #AEAEAE;
+    font-size: 8px;
+    font-weight: normal;
+    margin-top: 12px;
+    @include mq(pc) {
+      font-size: 9px;
+      text-align: right;
+    }
+  }
+}
